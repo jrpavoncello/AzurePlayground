@@ -7,6 +7,8 @@ using System.ServiceModel.Activation;
 using Autofac;
 using Autofac.Integration.Mvc;
 using AzurePlayground.Model;
+using System.Configuration;
+using System.Data.Entity.Migrations;
 
 namespace AzurePlayground.MvcDemo
 {
@@ -14,6 +16,13 @@ namespace AzurePlayground.MvcDemo
     {
         protected void Application_Start()
         {
+            if (bool.Parse(ConfigurationManager.AppSettings["MigrateDatabaseToLatestVersion"]))
+            {
+                var configuration = new AzurePlayground.Model.Migrations.Configuration();
+                var migrator = new DbMigrator(configuration);
+                migrator.Update();
+            }
+
             var builder = new ContainerBuilder();
 
             // Register your MVC controllers. (MvcApplication is the name of
