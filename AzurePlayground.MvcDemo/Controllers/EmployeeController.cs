@@ -7,6 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using AzurePlayground.Model;
+using StackExchange.Redis;
+using System.Configuration;
 
 namespace AzurePlayground.MvcDemo.Controllers
 {
@@ -32,11 +34,25 @@ namespace AzurePlayground.MvcDemo.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
+            //var lazyConnection = new Lazy<ConnectionMultiplexer>(() =>
+            //{
+            //    string cacheConnection = ConfigurationManager.AppSettings["CacheConnection"].ToString();
+            //    return ConnectionMultiplexer.Connect(cacheConnection);
+            //});
+
+            //// Connection refers to a property that returns a ConnectionMultiplexer
+            //// as shown in the previous example.
+            //IDatabase cache = lazyConnection.Value.GetDatabase();
+
+            //if(cache.(new RedisKey() {  })
+
             Employee employee = await northwindContext.Employees.FindAsync(id);
             if (employee == null)
             {
                 return HttpNotFound();
             }
+
             return View(employee);
         }
 
