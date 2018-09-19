@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using AzurePlayground.Model;
 using StackExchange.Redis;
 using System.Configuration;
+using System.Web.UI;
 
 namespace AzurePlayground.MvcDemo.Controllers
 {
@@ -21,7 +22,7 @@ namespace AzurePlayground.MvcDemo.Controllers
         }
 
         // GET: Employee
-        [OutputCache(Duration = 60, VaryByParam = "none")]
+        [OutputCache(CacheProfile="RedisShort", VaryByParam = "none")]
         public async Task<ActionResult> Index()
         {
             var employees = northwindContext.Employees.Include(e => e.Employee1);
@@ -29,7 +30,7 @@ namespace AzurePlayground.MvcDemo.Controllers
         }
 
         // GET: Employee/Details/5
-        [OutputCache(Duration = 60, VaryByParam = "id")]
+        [OutputCache(CacheProfile = "RedisShort", VaryByParam = "id")]
         public async Task<ActionResult> Details(int? id)
         {
             if (id == null)
