@@ -21,6 +21,7 @@ namespace AzurePlayground.MvcDemo.Controllers
         }
 
         // GET: Employee
+        [OutputCache(Duration = 60, VaryByParam = "none")]
         public async Task<ActionResult> Index()
         {
             var employees = northwindContext.Employees.Include(e => e.Employee1);
@@ -28,6 +29,7 @@ namespace AzurePlayground.MvcDemo.Controllers
         }
 
         // GET: Employee/Details/5
+        [OutputCache(Duration = 60, VaryByParam = "id")]
         public async Task<ActionResult> Details(int? id)
         {
             if (id == null)
