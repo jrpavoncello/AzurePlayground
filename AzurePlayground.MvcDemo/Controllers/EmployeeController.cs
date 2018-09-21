@@ -14,7 +14,6 @@ using Newtonsoft.Json;
 
 namespace AzurePlayground.MvcDemo.Controllers
 {
-    [Authorize]
     public class EmployeeController : Controller
     {
         private readonly NorthwindContext northwindContext;
