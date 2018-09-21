@@ -60,11 +60,19 @@ namespace AzurePlayground.MvcDemo.Controllers
                     return HttpNotFound();
                 }
 
-                cache.StringSet(employee.EmployeeID.ToString(), JsonConvert.SerializeObject(employee));
+                cache.StringSetAsync(
+                    employee.EmployeeID.ToString(), 
+                    JsonConvert.SerializeObject(employee, 
+                        new JsonSerializerSettings() { PreserveReferencesHandling = PreserveReferencesHandling.Objects }));
+                
+                employee.Region = "Non-cached";
             }
             else
             {
-                employee = JsonConvert.DeserializeObject<Employee>(cachedEmployee);
+                employee = JsonConvert.DeserializeObject<Employee>(cachedEmployee, 
+                    new JsonSerializerSettings() { PreserveReferencesHandling = PreserveReferencesHandling.Objects });
+
+                employee.Region = "Cached";
             }
 
             return View(employee);
