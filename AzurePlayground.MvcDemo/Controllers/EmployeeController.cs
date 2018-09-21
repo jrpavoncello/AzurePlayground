@@ -10,6 +10,7 @@ using AzurePlayground.Model;
 using StackExchange.Redis;
 using System.Configuration;
 using System.Web.UI;
+using Newtonsoft.Json;
 
 namespace AzurePlayground.MvcDemo.Controllers
 {
@@ -31,7 +32,6 @@ namespace AzurePlayground.MvcDemo.Controllers
         }
 
         // GET: Employee/Details/5
-        [OutputCache(CacheProfile = "RedisShort", VaryByParam = "id")]
         public async Task<ActionResult> Details(int? id)
         {
             if (id == null)
@@ -39,22 +39,33 @@ namespace AzurePlayground.MvcDemo.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            //var lazyConnection = new Lazy<ConnectionMultiplexer>(() =>
-            //{
-            //    string cacheConnection = ConfigurationManager.AppSettings["CacheConnection"].ToString();
-            //    return ConnectionMultiplexer.Connect(cacheConnection);
-            //});
-
-            //// Connection refers to a property that returns a ConnectionMultiplexer
-            //// as shown in the previous example.
-            //IDatabase cache = lazyConnection.Value.GetDatabase();
-
-            //if(cache.(new RedisKey() {  })
-
-            Employee employee = await northwindContext.Employees.FindAsync(id);
-            if (employee == null)
+            var lazyConnection = new Lazy<ConnectionMultiplexer>(() =>
             {
-                return HttpNotFound();
+                string cacheConnection = ConfigurationManager.AppSettings["CacheConnection"].ToString();
+                return ConnectionMultiplexer.Connect(cacheConnection);
+            });
+
+            // Connection refers to a property that returns a ConnectionMultiplexer
+            // as shown in the previous example.
+            IDatabase cache = lazyConnection.Value.GetDatabase();
+
+            var cachedEmployee = cache.StringGet(id.Value.ToString());
+            Employee employee = null;
+
+            if (string.IsNullOrEmpty(cachedEmployee))
+            {
+                employee = await northwindContext.Employees.FindAsync(id);
+
+                if (employee == null)
+                {
+                    return HttpNotFound();
+                }
+
+                cache.StringSet(employee.EmployeeID.ToString(), JsonConvert.SerializeObject(employee));
+            }
+            else
+            {
+                employee = JsonConvert.DeserializeObject<Employee>(cachedEmployee);
             }
 
             return View(employee);
