@@ -53,9 +53,7 @@
         <th class="wrap-col">
             @Html.DisplayNameFor(model => model.Notes)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Employee1.LastName)
-        </th>
+        <th>Reports To</th>
         <th>Actions</th>
     </tr>
 
@@ -104,14 +102,16 @@
             @Html.DisplayFor(modelItem => item.Notes)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Employee1.LastName)
+            @Html.DisplayFor(modelItem => item.ReportsToEmployee.LastName)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.EmployeeID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.EmployeeID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.EmployeeID })
-        </td>
+		<td>
+			@Html.ActionLink("Edit", "Edit", new { id = item.EmployeeID }) |
+			@Html.ActionLink("Details", "Details", new { id = item.EmployeeID }) |
+			@Html.ActionLink("Queue Email", "QueueEmail", new { id = item.EmployeeID })
+		</td>
     </tr>
+
+
 }
 
 </table>

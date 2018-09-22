@@ -60,7 +60,7 @@ namespace AzurePlayground.Model
 
             modelBuilder.Entity<Employee>()
                 .HasMany(e => e.Employees1)
-                .WithOptional(e => e.Employee1)
+                .WithOptional(e => e.ReportsToEmployee)
                 .HasForeignKey(e => e.ReportsTo);
 
             modelBuilder.Entity<Employee>()

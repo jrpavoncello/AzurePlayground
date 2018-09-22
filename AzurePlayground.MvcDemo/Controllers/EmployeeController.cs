@@ -11,6 +11,8 @@ using StackExchange.Redis;
 using System.Configuration;
 using System.Web.UI;
 using Newtonsoft.Json;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Queue;
 
 namespace AzurePlayground.MvcDemo.Controllers
 {
@@ -26,7 +28,7 @@ namespace AzurePlayground.MvcDemo.Controllers
         [OutputCache(CacheProfile="RedisShort", VaryByParam = "none")]
         public async Task<ActionResult> Index()
         {
-            var employees = northwindContext.Employees.Include(e => e.Employee1);
+            var employees = northwindContext.Employees.Include(e => e.ReportsToEmployee);
             return View(await employees.ToListAsync());
         }
 
@@ -159,6 +161,27 @@ namespace AzurePlayground.MvcDemo.Controllers
             Employee employee = await northwindContext.Employees.FindAsync(id);
             northwindContext.Employees.Remove(employee);
             await northwindContext.SaveChangesAsync();
+            return RedirectToAction("Index");
+        }
+
+        // POST: Employee/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        public async Task<ActionResult> QueueEmail(int id)
+        {
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(
+                ConfigurationManager.AppSettings["AzureHotStorageConnection"].ToString());
+
+            var queueClient = storageAccount.CreateCloudQueueClient();
+
+            var emailQueue = queueClient.GetQueueReference("employee-emails");
+
+            await emailQueue.CreateIfNotExistsAsync();
+
+            var message = new CloudQueueMessage(id.ToString());
+
+            await emailQueue.AddMessageAsync(message);
+
             return RedirectToAction("Index");
         }
 
