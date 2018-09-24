@@ -8,10 +8,10 @@ using SendGrid.Helpers.Mail;
 
 namespace AzurePlayground.EmailPusher
 {
-    public static class Function1
+    public static class DequeueEmployees
     {
-        [FunctionName("Function1")]
-        public static void Run([QueueTrigger("myqueue-items", Connection = "DefaultEndpointsProtocol=https;AccountName=wfaliatraininghotstorage;AccountKey=SyUJTknH/HpYLrPh7yHxua1+J9kDEequ9o3JZ7Dan6BIN+gRfZirksY/e/S5NyPQBlKcJQmY6+vo69d4xAuNNA==;EndpointSuffix=core.windows.net")]string myQueueItem, TraceWriter log)
+        [FunctionName("DequeueEmployees")]
+        public static void Run([QueueTrigger("employee-emails", Connection = "DefaultEndpointsProtocol=https;AccountName=wfaliatraininghotstorage;AccountKey=SyUJTknH/HpYLrPh7yHxua1+J9kDEequ9o3JZ7Dan6BIN+gRfZirksY/e/S5NyPQBlKcJQmY6+vo69d4xAuNNA==;EndpointSuffix=core.windows.net")]string message, TraceWriter log)
         {
             var apiKey = ConfigurationManager.AppSettings.Get("SendGridApiKey");
 
@@ -21,9 +21,9 @@ namespace AzurePlayground.EmailPusher
                 return;
             }
 
-            if(!Int32.TryParse(myQueueItem, out var employeeId))
+            if(!Int32.TryParse(message, out var employeeId))
             {
-                log.Error($"Queue item {myQueueItem} is not an integer");
+                log.Error($"Queue item {message} is not an integer");
                 return;
             }
 
