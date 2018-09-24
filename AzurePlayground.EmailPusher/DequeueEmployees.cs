@@ -62,10 +62,18 @@ namespace AzurePlayground.EmailPusher
 
             var response = task.Result;
 
-            if (response.StatusCode != System.Net.HttpStatusCode.OK)
+            var statusCode = (int)response.StatusCode;
+
+            if (statusCode < 200 || statusCode >= 300)
             {
+                var responseTask = response.Body.ReadAsStringAsync();
+
+                responseTask.Wait();
+
+                var responseBody = responseTask.Result;
+
                 log.Error($"An error occurred while sending the email, status code = {response.StatusCode}");
-                log.Info($"Response body:{System.Environment.NewLine}{response.Body}");
+                log.Info($"Response body:{System.Environment.NewLine}{responseBody}");
                 return;
             }
 
