@@ -11,7 +11,7 @@ namespace AzurePlayground.EmailPusher
     public static class DequeueEmployees
     {
         [FunctionName("DequeueEmployees")]
-        public static void Run([QueueTrigger("employee-emails", Connection = "DefaultEndpointsProtocol=https;AccountName=wfaliatraininghotstorage;AccountKey=SyUJTknH/HpYLrPh7yHxua1+J9kDEequ9o3JZ7Dan6BIN+gRfZirksY/e/S5NyPQBlKcJQmY6+vo69d4xAuNNA==;EndpointSuffix=core.windows.net")]string message, TraceWriter log)
+        public static void Run([QueueTrigger("employee-emails", Connection = "EmployeeQueue")]string message, TraceWriter log)
         {
             var apiKey = ConfigurationManager.AppSettings.Get("SendGridApiKey");
 
