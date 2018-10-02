@@ -1,0 +1,3235 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "serverfarms_EastUSPlan_name": {
+            "defaultValue": "EastUSPlan",
+            "type": "String"
+        },
+        "sites_emailpusherwestfalia_name": {
+            "defaultValue": "emailpusherwestfalia",
+            "type": "String"
+        },
+        "serverfarms_FreeServicePlan_name": {
+            "defaultValue": "FreeServicePlan",
+            "type": "String"
+        },
+        "sites_emailpusherwestfaliaqa_name": {
+            "defaultValue": "emailpusherwestfaliaqa",
+            "type": "String"
+        },
+        "sites_AzurePlaygroundMvcDemoQA_name": {
+            "defaultValue": "AzurePlaygroundMvcDemoQA",
+            "type": "String"
+        },
+        "sites_AzurePlaygroundMvcDemoPROD_name": {
+            "defaultValue": "AzurePlaygroundMvcDemoPROD",
+            "type": "String"
+        },
+        "sites_azuretoolkit_joshpavoncello_name": {
+            "defaultValue": "azuretoolkit-joshpavoncello",
+            "type": "String"
+        },
+        "profiles_AzureTrainingCdnWestfalia_name": {
+            "defaultValue": "AzureTrainingCdnWestfalia",
+            "type": "String"
+        },
+        "accounts_ImageSearch_name": {
+            "defaultValue": "ImageSearch",
+            "type": "String"
+        },
+        "components_emailpusherwestfalia_name": {
+            "defaultValue": "emailpusherwestfalia",
+            "type": "String"
+        },
+        "accounts_ImageDetection_name": {
+            "defaultValue": "ImageDetection",
+            "type": "String"
+        },
+        "config_web_name": {
+            "defaultValue": "web",
+            "type": "String"
+        },
+        "components_emailpusherwestfaliaqa_name": {
+            "defaultValue": "emailpusherwestfaliaqa",
+            "type": "String"
+        },
+        "servers_azuretoolkit_westfaliatraining_name": {
+            "defaultValue": "azuretoolkit-westfaliatraining",
+            "type": "String"
+        },
+        "Redis_AzurePlaygroundMvcDemoCacheProd_name": {
+            "defaultValue": "AzurePlaygroundMvcDemoCacheProd",
+            "type": "String"
+        },
+        "storageAccounts_emailpushereasta7e6_name": {
+            "defaultValue": "emailpushereasta7e6",
+            "type": "String"
+        },
+        "config_web_name_1": {
+            "defaultValue": "web",
+            "type": "String"
+        },
+        "storageAccounts_emailpushereastqa934d_name": {
+            "defaultValue": "emailpushereastqa934d",
+            "type": "String"
+        },
+        "config_web_name_2": {
+            "defaultValue": "web",
+            "type": "String"
+        },
+        "storageAccounts_eventhubwfaliatraining_name": {
+            "defaultValue": "eventhubwfaliatraining",
+            "type": "String"
+        },
+        "storageAccounts_wfaliatrainhotstorageqa_name": {
+            "defaultValue": "wfaliatrainhotstorageqa",
+            "type": "String"
+        },
+        "config_web_name_3": {
+            "defaultValue": "web",
+            "type": "String"
+        },
+        "storageAccounts_wfaliatraininghotstorage_name": {
+            "defaultValue": "wfaliatraininghotstorage",
+            "type": "String"
+        },
+        "config_web_name_4": {
+            "defaultValue": "web",
+            "type": "String"
+        },
+        "namespaces_azureplayground_westfalia_training_name": {
+            "defaultValue": "azureplayground-westfalia-training",
+            "type": "String"
+        },
+        "searchServices_azuretoolkitsearch_westfaliatraining_name": {
+            "defaultValue": "azuretoolkitsearch-westfaliatraining",
+            "type": "String"
+        },
+        "deployments_501537822993568_name": {
+            "defaultValue": "501537822993568",
+            "type": "String"
+        },
+        "deployments_471537810598432_name": {
+            "defaultValue": "471537810598432",
+            "type": "String"
+        },
+        "deployments_441537807112859_name": {
+            "defaultValue": "441537807112859",
+            "type": "String"
+        },
+        "deployments_411537801399558_name": {
+            "defaultValue": "411537801399558",
+            "type": "String"
+        },
+        "alertrules_Failure_Anomalies___emailpusherwestfalia_name": {
+            "defaultValue": "Failure Anomalies - emailpusherwestfalia",
+            "type": "String"
+        },
+        "deployments_491537822980405_name": {
+            "defaultValue": "491537822980405",
+            "type": "String"
+        },
+        "advisors_DropIndex_name": {
+            "defaultValue": "DropIndex",
+            "type": "String"
+        },
+        "alertrules_Failure_Anomalies___emailpusherwestfaliaqa_name": {
+            "defaultValue": "Failure Anomalies - emailpusherwestfaliaqa",
+            "type": "String"
+        },
+        "keys_ServiceManaged_name": {
+            "defaultValue": "ServiceManaged",
+            "type": "String"
+        },
+        "deployments_491537822954322_name": {
+            "defaultValue": "491537822954322",
+            "type": "String"
+        },
+        "deployments_451537810634875_name": {
+            "defaultValue": "451537810634875",
+            "type": "String"
+        },
+        "deployments_421537807144787_name": {
+            "defaultValue": "421537807144787",
+            "type": "String"
+        },
+        "deployments_381537800546271_name": {
+            "defaultValue": "381537800546271",
+            "type": "String"
+        },
+        "deployments_351537798387079_name": {
+            "defaultValue": "351537798387079",
+            "type": "String"
+        },
+        "deployments_311537798317543_name": {
+            "defaultValue": "311537798317543",
+            "type": "String"
+        },
+        "deployments_291537590033468_name": {
+            "defaultValue": "291537590033468",
+            "type": "String"
+        },
+        "deployments_281537564968039_name": {
+            "defaultValue": "281537564968039",
+            "type": "String"
+        },
+        "deployments_261537561109189_name": {
+            "defaultValue": "261537561109189",
+            "type": "String"
+        },
+        "deployments_251537410383407_name": {
+            "defaultValue": "251537410383407",
+            "type": "String"
+        },
+        "trafficManagerProfiles_trafficmanager_westfaliatraining_name": {
+            "defaultValue": "trafficmanager-westfaliatraining",
+            "type": "String"
+        },
+        "advisors_CreateIndex_name": {
+            "defaultValue": "CreateIndex",
+            "type": "String"
+        },
+        "deployments_501537823021760_name": {
+            "defaultValue": "501537823021760",
+            "type": "String"
+        },
+        "deployments_481537821905018_name": {
+            "defaultValue": "481537821905018",
+            "type": "String"
+        },
+        "deployments_251537561118903_name": {
+            "defaultValue": "251537561118903",
+            "type": "String"
+        },
+        "deployments_171537333364465_name": {
+            "defaultValue": "171537333364465",
+            "type": "String"
+        },
+        "deployments_101537297250327_name": {
+            "defaultValue": "101537297250327",
+            "type": "String"
+        },
+        "databases_azuretoolkit_name": {
+            "defaultValue": "azuretoolkit",
+            "type": "String"
+        },
+        "firewallRules_Westfalia_name": {
+            "defaultValue": "Westfalia",
+            "type": "String"
+        },
+        "advisors_DefragmentIndex_name": {
+            "defaultValue": "DefragmentIndex",
+            "type": "String"
+        },
+        "auditingPolicies_Default_name": {
+            "defaultValue": "Default",
+            "type": "String"
+        },
+        "advisors_ForceLastGoodPlan_name": {
+            "defaultValue": "ForceLastGoodPlan",
+            "type": "String"
+        },
+        "advisors_DbParameterization_name": {
+            "defaultValue": "DbParameterization",
+            "type": "String"
+        },
+        "encryptionProtector_current_name": {
+            "defaultValue": "current",
+            "type": "String"
+        },
+        "endpoints_azureplayground_qa_westfalia_name": {
+            "defaultValue": "azureplayground-qa-westfalia",
+            "type": "String"
+        },
+        "endpoints_azureplayground_prod_westfalia_name": {
+            "defaultValue": "azureplayground-prod-westfalia",
+            "type": "String"
+        },
+        "firewallRules_AllowAllWindowsAzureIps_name": {
+            "defaultValue": "AllowAllWindowsAzureIps",
+            "type": "String"
+        },
+        "eventhubs_azureplaygroundhub_name": {
+            "defaultValue": "azureplaygroundhub",
+            "type": "String"
+        },
+        "advisors_DropIndex_name_1": {
+            "defaultValue": "DropIndex",
+            "type": "String"
+        },
+        "auditingPolicies_Default_name_1": {
+            "defaultValue": "Default",
+            "type": "String"
+        },
+        "databases_master_name": {
+            "defaultValue": "master",
+            "type": "String"
+        },
+        "geoBackupPolicies_Default_name": {
+            "defaultValue": "Default",
+            "type": "String"
+        },
+        "advisors_CreateIndex_name_1": {
+            "defaultValue": "CreateIndex",
+            "type": "String"
+        },
+        "hostNameBindings_emailpusherwestfalia.azurewebsites.net_name": {
+            "defaultValue": "emailpusherwestfalia.azurewebsites.net",
+            "type": "String"
+        },
+        "advisors_DefragmentIndex_name_1": {
+            "defaultValue": "DefragmentIndex",
+            "type": "String"
+        },
+        "auditingPolicies_Default_name_2": {
+            "defaultValue": "Default",
+            "type": "String"
+        },
+        "hostNameBindings_emailpusherwestfaliaqa.azurewebsites.net_name": {
+            "defaultValue": "emailpusherwestfaliaqa.azurewebsites.net",
+            "type": "String"
+        },
+        "deployments_06891aad7736fa77be278e2411222f359722efca_name": {
+            "defaultValue": "06891aad7736fa77be278e2411222f359722efca",
+            "type": "String"
+        },
+        "deployments_03738138820576ae2a6381e65b30ee58a445381f_name": {
+            "defaultValue": "03738138820576ae2a6381e65b30ee58a445381f",
+            "type": "String"
+        },
+        "deployments_3ef07c4aff95795140ae04eb65707c88ec72ddc1_name": {
+            "defaultValue": "3ef07c4aff95795140ae04eb65707c88ec72ddc1",
+            "type": "String"
+        },
+        "deployments_29c1fa8099c97be4afdf701e0658fd5b4a164c7f_name": {
+            "defaultValue": "29c1fa8099c97be4afdf701e0658fd5b4a164c7f",
+            "type": "String"
+        },
+        "deployments_2580dce2319a2cb62e37ff33be64fa57ef09ae76_name": {
+            "defaultValue": "2580dce2319a2cb62e37ff33be64fa57ef09ae76",
+            "type": "String"
+        },
+        "deployments_7e2e3f30ce39c5e12dca94220c132f6abfef4c36_name": {
+            "defaultValue": "7e2e3f30ce39c5e12dca94220c132f6abfef4c36",
+            "type": "String"
+        },
+        "deployments_9343e9fa6618f38911e8f043971a748a88b61945_name": {
+            "defaultValue": "9343e9fa6618f38911e8f043971a748a88b61945",
+            "type": "String"
+        },
+        "deployments_276218c26ab4b4d86ad2ad1043ccb2ec9db414ae_name": {
+            "defaultValue": "276218c26ab4b4d86ad2ad1043ccb2ec9db414ae",
+            "type": "String"
+        },
+        "deployments_4242852a9d56bdb95d5032924ed03b1b79b89339_name": {
+            "defaultValue": "4242852a9d56bdb95d5032924ed03b1b79b89339",
+            "type": "String"
+        },
+        "deployments_349497deac7ce536d8e9c4fd3cc78586878ec8f6_name": {
+            "defaultValue": "349497deac7ce536d8e9c4fd3cc78586878ec8f6",
+            "type": "String"
+        },
+        "deployments_d5c286d0d05c66367c70e55c7ae1944b83e1ef60_name": {
+            "defaultValue": "d5c286d0d05c66367c70e55c7ae1944b83e1ef60",
+            "type": "String"
+        },
+        "databases_AzurePlaygroundMvcDemo_Northwind_QA_db_name": {
+            "defaultValue": "AzurePlaygroundMvcDemo_Northwind_QA_db",
+            "type": "String"
+        },
+        "geoBackupPolicies_Default_name_1": {
+            "defaultValue": "Default",
+            "type": "String"
+        },
+        "advisors_ForceLastGoodPlan_name_1": {
+            "defaultValue": "ForceLastGoodPlan",
+            "type": "String"
+        },
+        "databases_AzurePlaygroundMvcDemo_Northwind_PROD_db_name": {
+            "defaultValue": "AzurePlaygroundMvcDemo_Northwind_PROD_db",
+            "type": "String"
+        },
+        "advisors_DbParameterization_name_1": {
+            "defaultValue": "DbParameterization",
+            "type": "String"
+        },
+        "transparentDataEncryption_current_name": {
+            "defaultValue": "current",
+            "type": "String"
+        },
+        "hostNameBindings_azureplaygroundmvcdemoqa.azurewebsites.net_name": {
+            "defaultValue": "azureplaygroundmvcdemoqa.azurewebsites.net",
+            "type": "String"
+        },
+        "hostNameBindings_azureplaygroundmvcdemoprod.azurewebsites.net_name": {
+            "defaultValue": "azureplaygroundmvcdemoprod.azurewebsites.net",
+            "type": "String"
+        },
+        "AuthorizationRules_RootManageSharedAccessKey_name": {
+            "defaultValue": "RootManageSharedAccessKey",
+            "type": "String"
+        },
+        "transparentDataEncryption_current_name_1": {
+            "defaultValue": "current",
+            "type": "String"
+        },
+        "hostNameBindings_azuretoolkit_joshpavoncello.azurewebsites.net_name": {
+            "defaultValue": "azuretoolkit-joshpavoncello.azurewebsites.net",
+            "type": "String"
+        },
+        "consumergroups_$Default_name": {
+            "defaultValue": "$Default",
+            "type": "String"
+        },
+        "auditingPolicies_Default_name_3": {
+            "defaultValue": "Default",
+            "type": "String"
+        },
+        "geoBackupPolicies_Default_name_2": {
+            "defaultValue": "Default",
+            "type": "String"
+        },
+        "auditingPolicies_Default_name_4": {
+            "defaultValue": "Default",
+            "type": "String"
+        },
+        "geoBackupPolicies_Default_name_3": {
+            "defaultValue": "Default",
+            "type": "String"
+        },
+        "transparentDataEncryption_current_name_2": {
+            "defaultValue": "current",
+            "type": "String"
+        },
+        "transparentDataEncryption_current_name_3": {
+            "defaultValue": "current",
+            "type": "String"
+        },
+        "origins_azureplaygroundmvcdemoqa_azurewebsites_net_name": {
+            "defaultValue": "azureplaygroundmvcdemoqa-azurewebsites-net",
+            "type": "String"
+        },
+        "origins_azureplaygroundmvcdemoprod_azurewebsites_net_name": {
+            "defaultValue": "azureplaygroundmvcdemoprod-azurewebsites-net",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Cache/Redis/AzurePlaygroundMvcDemoCacheProd'.",
+            "type": "Microsoft.Cache/Redis",
+            "name": "[parameters('Redis_AzurePlaygroundMvcDemoCacheProd_name')]",
+            "apiVersion": "2017-10-01",
+            "location": "East US",
+            "tags": {},
+            "scale": null,
+            "properties": {
+                "sku": {
+                    "name": "Basic",
+                    "family": "C",
+                    "capacity": 0
+                },
+                "enableNonSslPort": false,
+                "redisConfiguration": {
+                    "maxclients": "256",
+                    "maxmemory-reserved": "2",
+                    "maxfragmentationmemory-reserved": "12",
+                    "maxmemory-delta": "2"
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Cdn/profiles/AzureTrainingCdnWestfalia'.",
+            "type": "Microsoft.Cdn/profiles",
+            "sku": {
+                "name": "Standard_Microsoft"
+            },
+            "name": "[parameters('profiles_AzureTrainingCdnWestfalia_name')]",
+            "apiVersion": "2016-04-02",
+            "location": "EastUs",
+            "tags": {},
+            "scale": null,
+            "properties": {
+                "provisioningState": "Succeeded",
+                "resourceState": "Disabled"
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.CognitiveServices/accounts/ImageSearch'.",
+            "type": "Microsoft.CognitiveServices/accounts",
+            "sku": {
+                "name": "F0"
+            },
+            "kind": "Bing.Search.v7",
+            "name": "[parameters('accounts_ImageSearch_name')]",
+            "apiVersion": "2016-02-01-preview",
+            "location": "global",
+            "scale": null,
+            "properties": {},
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.CognitiveServices/accounts/ImageDetection'.",
+            "type": "Microsoft.CognitiveServices/accounts",
+            "sku": {
+                "name": "F0"
+            },
+            "kind": "ComputerVision",
+            "name": "[parameters('accounts_ImageDetection_name')]",
+            "apiVersion": "2016-02-01-preview",
+            "location": "eastus",
+            "scale": null,
+            "properties": {},
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.EventHub/namespaces/azureplayground-westfalia-training'.",
+            "type": "Microsoft.EventHub/namespaces",
+            "sku": {
+                "name": "Basic",
+                "tier": "Basic",
+                "capacity": 1
+            },
+            "name": "[parameters('namespaces_azureplayground_westfalia_training_name')]",
+            "apiVersion": "2017-04-01",
+            "location": "East US",
+            "tags": {},
+            "scale": null,
+            "properties": {
+                "isAutoInflateEnabled": false,
+                "maximumThroughputUnits": 0
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/microsoft.insights/alertrules/Failure Anomalies - emailpusherwestfalia'.",
+            "type": "microsoft.insights/alertrules",
+            "name": "[parameters('alertrules_Failure_Anomalies___emailpusherwestfalia_name')]",
+            "apiVersion": "2014-04-01",
+            "location": "East US",
+            "tags": {
+                "hidden-link:/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/microsoft.insights/components/emailpusherwestfalia": "Resource"
+            },
+            "scale": null,
+            "properties": {
+                "name": "[parameters('alertrules_Failure_Anomalies___emailpusherwestfalia_name')]",
+                "description": "",
+                "isEnabled": true,
+                "condition": {
+                    "odata.type": "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition",
+                    "dataSource": {
+                        "odata.type": "Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource",
+                        "resourceUri": "[resourceId('microsoft.insights/components', parameters('components_emailpusherwestfalia_name'))]",
+                        "metricNamespace": null,
+                        "metricName": "advanced::A3108E3D-5E26-44CF-B232-783F5E20EF10::ewAiAEgAeQBwAGUAcgBpAG8AbgBBAHAAcABsAGkAYwBhAHQAaQBvAG4AUwBpAGQAIgA6AG4AdQBsAGwALAAiAEgAeQBwAGUAcgBpAG8AbgBTAHUAYgBqAGUAYwB0AFMAaQBkACIAOgBuAHUAbABsACwAIgBIAHkAcABlAHIAaQBvAG4ATwBiAHMAZQByAHYAZQByAFMAaQBkACIAOgBuAHUAbABsACwAIgBDAHUAcwB0AG8AbQBlAHIAQQBjAGMAbwB1AG4AdABJAGQAIgA6ACIAMAAwADAAMAAwADAAMAAwAC0AMAAwADAAMAAtADAAMAAwADAALQAwADAAMAAwAC0AMAAwADAAMAAwADAAMAAwADAAMAAwADAAIgAsACIAQQBwAHAAbABpAGMAYQB0AGkAbwBuAE4AYQBtAGUAIgA6AG4AdQBsAGwALAAiAEEAcABwAGwAaQBjAGEAdABpAG8AbgBJAGQAIgA6AG4AdQBsAGwALAAiAFAAcgBvAGYAaQBsAGUASQBkACIAOgAwACwAIgBXAGkAbgBkAG8AdwBTAGkAegBlAEkAbgBNAGkAbgB1AHQAZQBzACIAOgA2ADAALAAiAE0AZQB0AHIAaQBjAE4AYQBtAGUAIgA6ACIAIgAsACIAVABoAHIAZQBzAGgAbwBsAGQAIgA6ADIALgAwACwAIgBBAGwAZQByAHQAVABlAG0AcABsAGEAdABlAEkAZAAiADoAIgAiACwAIgBSAHUAbABlAEkAZAAiADoAIgAiACwAIgBSAHUAbABlAE4AYQBtAGUAIgA6ACIAIgAsACIAUgB1AGwAZQBEAGUAcwBjAHIAaQBwAHQAaQBvAG4AIgA6ACIAIgAsACIAUgBlAHMAbwB1AHIAYwBlAEkAZAAiADoAbgB1AGwAbAAsACIAUwB1AGIAcwBjAHIAaQBwAHQAaQBvAG4ASQBkACIAOgBuAHUAbABsACwAIgBBAGcAZwByAGUAZwBhAHQAZQBGAHUAbgBjAHQAaQBvAG4AIgA6ACIAIgAsACIAQwBvAG0AcABhAHIAaQBzAG8AbgBPAHAAZQByAGEAdABvAHIAIgA6ACIAewBcACIAQgBhAHMAZQBsAGkAbgBlAFQAaQBtAGUAcwBwAGEAbgBcACIAOgBcACIAMAAwADoANAAwADoAMAAwAFwAIgAsAFwAIgBJAG4AcwBpAGcAaAB0AHMAUwBlAHIAdgBpAGMAZQBMAGEAZwBcACIAOgBcACIAMAAwADoAMAAwADoAMAAwAFwAIgAsAFwAIgBCAHUAZgBmAGUAcgBUAGkAbQBlAFwAIgA6AFwAIgAwADAAOgAwADEAOgAwADAAXAAiACwAXAAiAEIAbABvAGIAUwB0AG8AcgBhAGcAZQBMAG8AZwBnAGkAbgBnAEUAbgBhAGIAbABlAGQAXAAiADoAZgBhAGwAcwBlACwAXAAiAFUAcwBlAHIAUwB1AHAAcAByAGUAcwBzAGkAbwBuAHMAXAAiADoAbgB1AGwAbAAsAFwAIgBQAHIAbwBmAGkAbABlAEkAZABcACIAOgAwACwAXAAiAEUAbQBhAGkAbABUAHkAcABlAFwAIgA6ADAALABcACIAUgBkAGQARgBhAGkAbAB1AHIAZQBzAFMAcABpAGsAZQBUAGgAcgBlAHMAaABvAGwAZABcACIAOgAzAC4AMAAsAFwAIgBSAGEAdwBQAHIAbwBhAGMAdABpAHYAZQBSAHUAbABlAEMAbwBuAGYAaQBnAFwAIgA6AG4AdQBsAGwAfQAiACwAIgBFAG4AYQBiAGwAZQBTAGUAbgBkAEUAbQBhAGkAbABUAG8AQwB1AHMAdABvAG0AIgA6AGYAYQBsAHMAZQAsACIAQwB1AHMAdABvAG0ARQBtAGEAaQBsAHMARQBuAGMAbwBkAGUAZAAiADoAIgAiACwAIgBFAG4AYQBiAGwAZQBTAGUAbgBkAEUAbQBhAGkAbABUAG8ATwB3AG4AZQByAHMAIgA6AGYAYQBsAHMAZQB9AA=="
+                    },
+                    "operator": "GreaterThan",
+                    "threshold": 2,
+                    "windowSize": "PT1H"
+                },
+                "action": {
+                    "odata.type": "Microsoft.Azure.Management.Insights.Models.RuleEmailAction",
+                    "sendToServiceOwners": true,
+                    "customEmails": []
+                }
+            },
+            "dependsOn": [
+                "[resourceId('microsoft.insights/components', parameters('components_emailpusherwestfalia_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/microsoft.insights/alertrules/Failure Anomalies - emailpusherwestfaliaqa'.",
+            "type": "microsoft.insights/alertrules",
+            "name": "[parameters('alertrules_Failure_Anomalies___emailpusherwestfaliaqa_name')]",
+            "apiVersion": "2014-04-01",
+            "location": "East US",
+            "tags": {
+                "hidden-link:/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/microsoft.insights/components/emailpusherwestfaliaqa": "Resource"
+            },
+            "scale": null,
+            "properties": {
+                "name": "[parameters('alertrules_Failure_Anomalies___emailpusherwestfaliaqa_name')]",
+                "description": "",
+                "isEnabled": true,
+                "condition": {
+                    "odata.type": "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition",
+                    "dataSource": {
+                        "odata.type": "Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource",
+                        "resourceUri": "[resourceId('microsoft.insights/components', parameters('components_emailpusherwestfaliaqa_name'))]",
+                        "metricNamespace": null,
+                        "metricName": "advanced::A3108E3D-5E26-44CF-B232-783F5E20EF10::ewAiAEgAeQBwAGUAcgBpAG8AbgBBAHAAcABsAGkAYwBhAHQAaQBvAG4AUwBpAGQAIgA6AG4AdQBsAGwALAAiAEgAeQBwAGUAcgBpAG8AbgBTAHUAYgBqAGUAYwB0AFMAaQBkACIAOgBuAHUAbABsACwAIgBIAHkAcABlAHIAaQBvAG4ATwBiAHMAZQByAHYAZQByAFMAaQBkACIAOgBuAHUAbABsACwAIgBDAHUAcwB0AG8AbQBlAHIAQQBjAGMAbwB1AG4AdABJAGQAIgA6ACIAMAAwADAAMAAwADAAMAAwAC0AMAAwADAAMAAtADAAMAAwADAALQAwADAAMAAwAC0AMAAwADAAMAAwADAAMAAwADAAMAAwADAAIgAsACIAQQBwAHAAbABpAGMAYQB0AGkAbwBuAE4AYQBtAGUAIgA6AG4AdQBsAGwALAAiAEEAcABwAGwAaQBjAGEAdABpAG8AbgBJAGQAIgA6AG4AdQBsAGwALAAiAFAAcgBvAGYAaQBsAGUASQBkACIAOgAwACwAIgBXAGkAbgBkAG8AdwBTAGkAegBlAEkAbgBNAGkAbgB1AHQAZQBzACIAOgA2ADAALAAiAE0AZQB0AHIAaQBjAE4AYQBtAGUAIgA6ACIAIgAsACIAVABoAHIAZQBzAGgAbwBsAGQAIgA6ADIALgAwACwAIgBBAGwAZQByAHQAVABlAG0AcABsAGEAdABlAEkAZAAiADoAIgAiACwAIgBSAHUAbABlAEkAZAAiADoAIgAiACwAIgBSAHUAbABlAE4AYQBtAGUAIgA6ACIAIgAsACIAUgB1AGwAZQBEAGUAcwBjAHIAaQBwAHQAaQBvAG4AIgA6ACIAIgAsACIAUgBlAHMAbwB1AHIAYwBlAEkAZAAiADoAbgB1AGwAbAAsACIAUwB1AGIAcwBjAHIAaQBwAHQAaQBvAG4ASQBkACIAOgBuAHUAbABsACwAIgBBAGcAZwByAGUAZwBhAHQAZQBGAHUAbgBjAHQAaQBvAG4AIgA6ACIAIgAsACIAQwBvAG0AcABhAHIAaQBzAG8AbgBPAHAAZQByAGEAdABvAHIAIgA6ACIAewBcACIAQgBhAHMAZQBsAGkAbgBlAFQAaQBtAGUAcwBwAGEAbgBcACIAOgBcACIAMAAwADoANAAwADoAMAAwAFwAIgAsAFwAIgBJAG4AcwBpAGcAaAB0AHMAUwBlAHIAdgBpAGMAZQBMAGEAZwBcACIAOgBcACIAMAAwADoAMAAwADoAMAAwAFwAIgAsAFwAIgBCAHUAZgBmAGUAcgBUAGkAbQBlAFwAIgA6AFwAIgAwADAAOgAwADEAOgAwADAAXAAiACwAXAAiAEIAbABvAGIAUwB0AG8AcgBhAGcAZQBMAG8AZwBnAGkAbgBnAEUAbgBhAGIAbABlAGQAXAAiADoAZgBhAGwAcwBlACwAXAAiAFUAcwBlAHIAUwB1AHAAcAByAGUAcwBzAGkAbwBuAHMAXAAiADoAbgB1AGwAbAAsAFwAIgBQAHIAbwBmAGkAbABlAEkAZABcACIAOgAwACwAXAAiAEUAbQBhAGkAbABUAHkAcABlAFwAIgA6ADAALABcACIAUgBkAGQARgBhAGkAbAB1AHIAZQBzAFMAcABpAGsAZQBUAGgAcgBlAHMAaABvAGwAZABcACIAOgAzAC4AMAAsAFwAIgBSAGEAdwBQAHIAbwBhAGMAdABpAHYAZQBSAHUAbABlAEMAbwBuAGYAaQBnAFwAIgA6AG4AdQBsAGwAfQAiACwAIgBFAG4AYQBiAGwAZQBTAGUAbgBkAEUAbQBhAGkAbABUAG8AQwB1AHMAdABvAG0AIgA6AGYAYQBsAHMAZQAsACIAQwB1AHMAdABvAG0ARQBtAGEAaQBsAHMARQBuAGMAbwBkAGUAZAAiADoAIgAiACwAIgBFAG4AYQBiAGwAZQBTAGUAbgBkAEUAbQBhAGkAbABUAG8ATwB3AG4AZQByAHMAIgA6AGYAYQBsAHMAZQB9AA=="
+                    },
+                    "operator": "GreaterThan",
+                    "threshold": 2,
+                    "windowSize": "PT1H"
+                },
+                "action": {
+                    "odata.type": "Microsoft.Azure.Management.Insights.Models.RuleEmailAction",
+                    "sendToServiceOwners": true,
+                    "customEmails": []
+                }
+            },
+            "dependsOn": [
+                "[resourceId('microsoft.insights/components', parameters('components_emailpusherwestfaliaqa_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/microsoft.insights/components/emailpusherwestfalia'.",
+            "type": "microsoft.insights/components",
+            "kind": "web",
+            "name": "[parameters('components_emailpusherwestfalia_name')]",
+            "apiVersion": "2015-05-01",
+            "location": "eastus",
+            "tags": {
+                "hidden-link:/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/emailpusherwestfalia": "Resource"
+            },
+            "scale": null,
+            "properties": {
+                "Application_Type": "web",
+                "Flow_Type": null,
+                "Request_Source": "IbizaWebAppExtensionCreate",
+                "HockeyAppId": null,
+                "SamplingPercentage": null
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/microsoft.insights/components/emailpusherwestfaliaqa'.",
+            "type": "microsoft.insights/components",
+            "kind": "web",
+            "name": "[parameters('components_emailpusherwestfaliaqa_name')]",
+            "apiVersion": "2015-05-01",
+            "location": "eastus",
+            "tags": {
+                "hidden-link:/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/emailpusherwestfaliaqa": "Resource"
+            },
+            "scale": null,
+            "properties": {
+                "Application_Type": "web",
+                "Flow_Type": null,
+                "Request_Source": "IbizaWebAppExtensionCreate",
+                "HockeyAppId": null,
+                "SamplingPercentage": null
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/azuretoolkitresourcegroup/providers/Microsoft.Network/trafficManagerProfiles/trafficmanager-westfaliatraining'.",
+            "type": "Microsoft.Network/trafficManagerProfiles",
+            "name": "[parameters('trafficManagerProfiles_trafficmanager_westfaliatraining_name')]",
+            "apiVersion": "2017-05-01",
+            "location": "global",
+            "tags": {},
+            "scale": null,
+            "properties": {
+                "profileStatus": "Enabled",
+                "trafficRoutingMethod": "Performance",
+                "dnsConfig": {
+                    "relativeName": "[parameters('trafficManagerProfiles_trafficmanager_westfaliatraining_name')]",
+                    "fqdn": "[concat(parameters('trafficManagerProfiles_trafficmanager_westfaliatraining_name'),'.trafficmanager.net')]",
+                    "ttl": 60
+                },
+                "monitorConfig": {
+                    "protocol": "HTTP",
+                    "port": 80,
+                    "path": "/",
+                    "intervalInSeconds": 30,
+                    "toleratedNumberOfFailures": 3,
+                    "timeoutInSeconds": 10
+                },
+                "endpoints": []
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Search/searchServices/azuretoolkitsearch-westfaliatraining'.",
+            "type": "Microsoft.Search/searchServices",
+            "sku": {
+                "name": "free"
+            },
+            "name": "[parameters('searchServices_azuretoolkitsearch_westfaliatraining_name')]",
+            "apiVersion": "2015-08-19",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "replicaCount": 1,
+                "partitionCount": 1,
+                "hostingMode": "Default"
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Sql/servers/azuretoolkit-westfaliatraining'.",
+            "type": "Microsoft.Sql/servers",
+            "kind": "v12.0",
+            "name": "[parameters('servers_azuretoolkit_westfaliatraining_name')]",
+            "apiVersion": "2015-05-01-preview",
+            "location": "eastus",
+            "scale": null,
+            "properties": {
+                "administratorLogin": "atk_westfaliausa_admin",
+                "version": "12.0"
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Storage/storageAccounts/emailpushereastqa934d'.",
+            "type": "Microsoft.Storage/storageAccounts",
+            "sku": {
+                "name": "Standard_LRS",
+                "tier": "Standard"
+            },
+            "kind": "Storage",
+            "name": "[parameters('storageAccounts_emailpushereastqa934d_name')]",
+            "apiVersion": "2018-03-01-preview",
+            "location": "eastus",
+            "tags": {},
+            "scale": null,
+            "properties": {
+                "networkAcls": {
+                    "bypass": "AzureServices",
+                    "virtualNetworkRules": [],
+                    "ipRules": [],
+                    "defaultAction": "Allow"
+                },
+                "supportsHttpsTrafficOnly": false,
+                "encryption": {
+                    "services": {
+                        "file": {
+                            "enabled": true
+                        },
+                        "blob": {
+                            "enabled": true
+                        }
+                    },
+                    "keySource": "Microsoft.Storage"
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Storage/storageAccounts/emailpushereasta7e6'.",
+            "type": "Microsoft.Storage/storageAccounts",
+            "sku": {
+                "name": "Standard_LRS",
+                "tier": "Standard"
+            },
+            "kind": "Storage",
+            "name": "[parameters('storageAccounts_emailpushereasta7e6_name')]",
+            "apiVersion": "2018-03-01-preview",
+            "location": "eastus",
+            "tags": {},
+            "scale": null,
+            "properties": {
+                "networkAcls": {
+                    "bypass": "AzureServices",
+                    "virtualNetworkRules": [],
+                    "ipRules": [],
+                    "defaultAction": "Allow"
+                },
+                "supportsHttpsTrafficOnly": false,
+                "encryption": {
+                    "services": {
+                        "file": {
+                            "enabled": true
+                        },
+                        "blob": {
+                            "enabled": true
+                        }
+                    },
+                    "keySource": "Microsoft.Storage"
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Storage/storageAccounts/wfaliatraininghotstorage'.",
+            "type": "Microsoft.Storage/storageAccounts",
+            "sku": {
+                "name": "Standard_RAGRS",
+                "tier": "Standard"
+            },
+            "kind": "StorageV2",
+            "name": "[parameters('storageAccounts_wfaliatraininghotstorage_name')]",
+            "apiVersion": "2018-03-01-preview",
+            "location": "eastus",
+            "tags": {},
+            "scale": null,
+            "properties": {
+                "networkAcls": {
+                    "bypass": "AzureServices",
+                    "virtualNetworkRules": [],
+                    "ipRules": [],
+                    "defaultAction": "Allow"
+                },
+                "supportsHttpsTrafficOnly": false,
+                "encryption": {
+                    "services": {
+                        "file": {
+                            "enabled": true
+                        },
+                        "blob": {
+                            "enabled": true
+                        }
+                    },
+                    "keySource": "Microsoft.Storage"
+                },
+                "accessTier": "Hot"
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Storage/storageAccounts/wfaliatrainhotstorageqa'.",
+            "type": "Microsoft.Storage/storageAccounts",
+            "sku": {
+                "name": "Standard_RAGRS",
+                "tier": "Standard"
+            },
+            "kind": "StorageV2",
+            "name": "[parameters('storageAccounts_wfaliatrainhotstorageqa_name')]",
+            "apiVersion": "2018-03-01-preview",
+            "location": "eastus",
+            "tags": {},
+            "scale": null,
+            "properties": {
+                "networkAcls": {
+                    "bypass": "AzureServices",
+                    "virtualNetworkRules": [],
+                    "ipRules": [],
+                    "defaultAction": "Allow"
+                },
+                "supportsHttpsTrafficOnly": true,
+                "encryption": {
+                    "services": {
+                        "file": {
+                            "enabled": true
+                        },
+                        "blob": {
+                            "enabled": true
+                        }
+                    },
+                    "keySource": "Microsoft.Storage"
+                },
+                "accessTier": "Hot"
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Storage/storageAccounts/eventhubwfaliatraining'.",
+            "type": "Microsoft.Storage/storageAccounts",
+            "sku": {
+                "name": "Standard_RAGRS",
+                "tier": "Standard"
+            },
+            "kind": "StorageV2",
+            "name": "[parameters('storageAccounts_eventhubwfaliatraining_name')]",
+            "apiVersion": "2018-03-01-preview",
+            "location": "eastus",
+            "tags": {},
+            "scale": null,
+            "properties": {
+                "networkAcls": {
+                    "bypass": "AzureServices",
+                    "virtualNetworkRules": [],
+                    "ipRules": [],
+                    "defaultAction": "Allow"
+                },
+                "supportsHttpsTrafficOnly": true,
+                "encryption": {
+                    "services": {
+                        "file": {
+                            "enabled": true
+                        },
+                        "blob": {
+                            "enabled": true
+                        }
+                    },
+                    "keySource": "Microsoft.Storage"
+                },
+                "accessTier": "Hot"
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Web/serverfarms/EastUSPlan'.",
+            "type": "Microsoft.Web/serverfarms",
+            "sku": {
+                "name": "Y1",
+                "tier": "Dynamic",
+                "size": "Y1",
+                "family": "Y",
+                "capacity": 0
+            },
+            "kind": "functionapp",
+            "name": "[parameters('serverfarms_EastUSPlan_name')]",
+            "apiVersion": "2016-09-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "name": "[parameters('serverfarms_EastUSPlan_name')]",
+                "workerTierName": null,
+                "adminSiteName": null,
+                "hostingEnvironmentProfile": null,
+                "perSiteScaling": false,
+                "reserved": false,
+                "targetWorkerCount": 0,
+                "targetWorkerSizeId": 0
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Web/serverfarms/FreeServicePlan'.",
+            "type": "Microsoft.Web/serverfarms",
+            "sku": {
+                "name": "F1",
+                "tier": "Free",
+                "size": "F1",
+                "family": "F",
+                "capacity": 0
+            },
+            "kind": "app",
+            "name": "[parameters('serverfarms_FreeServicePlan_name')]",
+            "apiVersion": "2016-09-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "name": "[parameters('serverfarms_FreeServicePlan_name')]",
+                "workerTierName": null,
+                "adminSiteName": null,
+                "hostingEnvironmentProfile": null,
+                "perSiteScaling": false,
+                "reserved": false,
+                "targetWorkerCount": 0,
+                "targetWorkerSizeId": 0
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/emailpusherwestfalia'.",
+            "type": "Microsoft.Web/sites",
+            "kind": "functionapp",
+            "name": "[parameters('sites_emailpusherwestfalia_name')]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "enabled": true,
+                "hostNameSslStates": [
+                    {
+                        "name": "[concat(parameters('sites_emailpusherwestfalia_name'),'.azurewebsites.net')]",
+                        "sslState": "Disabled",
+                        "virtualIP": null,
+                        "thumbprint": null,
+                        "toUpdate": null,
+                        "hostType": "Standard"
+                    },
+                    {
+                        "name": "[concat(parameters('sites_emailpusherwestfalia_name'),'.scm.azurewebsites.net')]",
+                        "sslState": "Disabled",
+                        "virtualIP": null,
+                        "thumbprint": null,
+                        "toUpdate": null,
+                        "hostType": "Repository"
+                    }
+                ],
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_EastUSPlan_name'))]",
+                "reserved": false,
+                "siteConfig": null,
+                "scmSiteAlsoStopped": false,
+                "hostingEnvironmentProfile": null,
+                "clientAffinityEnabled": false,
+                "clientCertEnabled": false,
+                "hostNamesDisabled": false,
+                "containerSize": 1536,
+                "dailyMemoryTimeQuota": 0,
+                "cloningInfo": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_EastUSPlan_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/emailpusherwestfaliaqa'.",
+            "type": "Microsoft.Web/sites",
+            "kind": "functionapp",
+            "name": "[parameters('sites_emailpusherwestfaliaqa_name')]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "enabled": true,
+                "hostNameSslStates": [
+                    {
+                        "name": "[concat(parameters('sites_emailpusherwestfaliaqa_name'),'.azurewebsites.net')]",
+                        "sslState": "Disabled",
+                        "virtualIP": null,
+                        "thumbprint": null,
+                        "toUpdate": null,
+                        "hostType": "Standard"
+                    },
+                    {
+                        "name": "[concat(parameters('sites_emailpusherwestfaliaqa_name'),'.scm.azurewebsites.net')]",
+                        "sslState": "Disabled",
+                        "virtualIP": null,
+                        "thumbprint": null,
+                        "toUpdate": null,
+                        "hostType": "Repository"
+                    }
+                ],
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_EastUSPlan_name'))]",
+                "reserved": false,
+                "siteConfig": null,
+                "scmSiteAlsoStopped": false,
+                "hostingEnvironmentProfile": null,
+                "clientAffinityEnabled": false,
+                "clientCertEnabled": false,
+                "hostNamesDisabled": false,
+                "containerSize": 1536,
+                "dailyMemoryTimeQuota": 0,
+                "cloningInfo": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_EastUSPlan_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/AzurePlaygroundMvcDemoQA'.",
+            "type": "Microsoft.Web/sites",
+            "kind": "app",
+            "name": "[parameters('sites_AzurePlaygroundMvcDemoQA_name')]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "identity": {
+                "principalId": "a4545255-cf29-4c62-918d-fafe29d6f0fc",
+                "tenantId": "ce6dd073-e7aa-44a7-9365-095364a487b1",
+                "type": "SystemAssigned"
+            },
+            "tags": {
+                "hidden-related:/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Web/serverfarms/FreeServicePlan": "empty"
+            },
+            "scale": null,
+            "properties": {
+                "enabled": true,
+                "hostNameSslStates": [
+                    {
+                        "name": "[concat(parameters('sites_AzurePlaygroundMvcDemoQA_name'),'azureplaygroundmvcdemoqa.azurewebsites.net')]",
+                        "sslState": "Disabled",
+                        "virtualIP": null,
+                        "thumbprint": null,
+                        "toUpdate": null,
+                        "hostType": "Standard"
+                    },
+                    {
+                        "name": "[concat(parameters('sites_AzurePlaygroundMvcDemoQA_name'),'azureplaygroundmvcdemoqa.scm.azurewebsites.net')]",
+                        "sslState": "Disabled",
+                        "virtualIP": null,
+                        "thumbprint": null,
+                        "toUpdate": null,
+                        "hostType": "Repository"
+                    }
+                ],
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_FreeServicePlan_name'))]",
+                "reserved": false,
+                "siteConfig": null,
+                "scmSiteAlsoStopped": false,
+                "hostingEnvironmentProfile": null,
+                "clientAffinityEnabled": true,
+                "clientCertEnabled": false,
+                "hostNamesDisabled": false,
+                "containerSize": 0,
+                "dailyMemoryTimeQuota": 0,
+                "cloningInfo": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_FreeServicePlan_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/azuretoolkit-joshpavoncello'.",
+            "type": "Microsoft.Web/sites",
+            "kind": "app",
+            "name": "[parameters('sites_azuretoolkit_joshpavoncello_name')]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "enabled": true,
+                "hostNameSslStates": [
+                    {
+                        "name": "[concat(parameters('sites_azuretoolkit_joshpavoncello_name'),'.azurewebsites.net')]",
+                        "sslState": "Disabled",
+                        "virtualIP": null,
+                        "thumbprint": null,
+                        "toUpdate": null,
+                        "hostType": "Standard"
+                    },
+                    {
+                        "name": "[concat(parameters('sites_azuretoolkit_joshpavoncello_name'),'.scm.azurewebsites.net')]",
+                        "sslState": "Disabled",
+                        "virtualIP": null,
+                        "thumbprint": null,
+                        "toUpdate": null,
+                        "hostType": "Repository"
+                    }
+                ],
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_FreeServicePlan_name'))]",
+                "reserved": false,
+                "siteConfig": null,
+                "scmSiteAlsoStopped": false,
+                "hostingEnvironmentProfile": null,
+                "clientAffinityEnabled": true,
+                "clientCertEnabled": false,
+                "hostNamesDisabled": false,
+                "containerSize": 0,
+                "dailyMemoryTimeQuota": 0,
+                "cloningInfo": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_FreeServicePlan_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/AzurePlaygroundMvcDemoPROD'.",
+            "type": "Microsoft.Web/sites",
+            "kind": "app",
+            "name": "[parameters('sites_AzurePlaygroundMvcDemoPROD_name')]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "identity": {
+                "principalId": "8b84335c-2076-433e-b039-9f3693f00e64",
+                "tenantId": "ce6dd073-e7aa-44a7-9365-095364a487b1",
+                "type": "SystemAssigned"
+            },
+            "tags": {
+                "hidden-related:/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Web/serverfarms/FreeServicePlan": "empty"
+            },
+            "scale": null,
+            "properties": {
+                "enabled": true,
+                "hostNameSslStates": [
+                    {
+                        "name": "[concat(parameters('sites_AzurePlaygroundMvcDemoPROD_name'),'azureplaygroundmvcdemoprod.azurewebsites.net')]",
+                        "sslState": "Disabled",
+                        "virtualIP": null,
+                        "thumbprint": null,
+                        "toUpdate": null,
+                        "hostType": "Standard"
+                    },
+                    {
+                        "name": "[concat(parameters('sites_AzurePlaygroundMvcDemoPROD_name'),'azureplaygroundmvcdemoprod.scm.azurewebsites.net')]",
+                        "sslState": "Disabled",
+                        "virtualIP": null,
+                        "thumbprint": null,
+                        "toUpdate": null,
+                        "hostType": "Repository"
+                    }
+                ],
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_FreeServicePlan_name'))]",
+                "reserved": false,
+                "siteConfig": null,
+                "scmSiteAlsoStopped": false,
+                "hostingEnvironmentProfile": null,
+                "clientAffinityEnabled": true,
+                "clientCertEnabled": false,
+                "hostNamesDisabled": false,
+                "containerSize": 0,
+                "dailyMemoryTimeQuota": 0,
+                "cloningInfo": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_FreeServicePlan_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Cdn/profiles/AzureTrainingCdnWestfalia/endpoints/azureplayground-prod-westfalia'.",
+            "type": "Microsoft.Cdn/profiles/endpoints",
+            "name": "[concat(parameters('profiles_AzureTrainingCdnWestfalia_name'), '/', parameters('endpoints_azureplayground_prod_westfalia_name'))]",
+            "apiVersion": "2016-04-02",
+            "location": "EastUs",
+            "tags": {},
+            "scale": null,
+            "properties": {
+                "originHostHeader": "azureplaygroundmvcdemoprod.azurewebsites.net",
+                "isHttpAllowed": true,
+                "isHttpsAllowed": true,
+                "queryStringCachingBehavior": "IgnoreQueryString",
+                "originPath": null,
+                "origins": [
+                    {
+                        "name": "azureplaygroundmvcdemoprod-azurewebsites-net",
+                        "properties": {
+                            "hostName": "azureplaygroundmvcdemoprod.azurewebsites.net",
+                            "httpPort": null,
+                            "httpsPort": null
+                        }
+                    }
+                ],
+                "contentTypesToCompress": [
+                    "application/eot",
+                    "application/font",
+                    "application/font-sfnt",
+                    "application/javascript",
+                    "application/json",
+                    "application/opentype",
+                    "application/otf",
+                    "application/pkcs7-mime",
+                    "application/truetype",
+                    "application/ttf",
+                    "application/vnd.ms-fontobject",
+                    "application/xhtml+xml",
+                    "application/xml",
+                    "application/xml+rss",
+                    "application/x-font-opentype",
+                    "application/x-font-truetype",
+                    "application/x-font-ttf",
+                    "application/x-httpd-cgi",
+                    "application/x-javascript",
+                    "application/x-mpegurl",
+                    "application/x-opentype",
+                    "application/x-otf",
+                    "application/x-perl",
+                    "application/x-ttf",
+                    "font/eot",
+                    "font/ttf",
+                    "font/otf",
+                    "font/opentype",
+                    "image/svg+xml",
+                    "text/css",
+                    "text/csv",
+                    "text/html",
+                    "text/javascript",
+                    "text/js",
+                    "text/plain",
+                    "text/richtext",
+                    "text/tab-separated-values",
+                    "text/xml",
+                    "text/x-script",
+                    "text/x-component",
+                    "text/x-java-source"
+                ],
+                "isCompressionEnabled": true
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Cdn/profiles', parameters('profiles_AzureTrainingCdnWestfalia_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Cdn/profiles/AzureTrainingCdnWestfalia/endpoints/azureplayground-qa-westfalia'.",
+            "type": "Microsoft.Cdn/profiles/endpoints",
+            "name": "[concat(parameters('profiles_AzureTrainingCdnWestfalia_name'), '/', parameters('endpoints_azureplayground_qa_westfalia_name'))]",
+            "apiVersion": "2016-04-02",
+            "location": "EastUs",
+            "tags": {},
+            "scale": null,
+            "properties": {
+                "originHostHeader": "azureplaygroundmvcdemoqa.azurewebsites.net",
+                "isHttpAllowed": true,
+                "isHttpsAllowed": true,
+                "queryStringCachingBehavior": "IgnoreQueryString",
+                "originPath": null,
+                "origins": [
+                    {
+                        "name": "azureplaygroundmvcdemoqa-azurewebsites-net",
+                        "properties": {
+                            "hostName": "azureplaygroundmvcdemoqa.azurewebsites.net",
+                            "httpPort": null,
+                            "httpsPort": null
+                        }
+                    }
+                ],
+                "contentTypesToCompress": [
+                    "application/eot",
+                    "application/font",
+                    "application/font-sfnt",
+                    "application/javascript",
+                    "application/json",
+                    "application/opentype",
+                    "application/otf",
+                    "application/pkcs7-mime",
+                    "application/truetype",
+                    "application/ttf",
+                    "application/vnd.ms-fontobject",
+                    "application/xhtml+xml",
+                    "application/xml",
+                    "application/xml+rss",
+                    "application/x-font-opentype",
+                    "application/x-font-truetype",
+                    "application/x-font-ttf",
+                    "application/x-httpd-cgi",
+                    "application/x-javascript",
+                    "application/x-mpegurl",
+                    "application/x-opentype",
+                    "application/x-otf",
+                    "application/x-perl",
+                    "application/x-ttf",
+                    "font/eot",
+                    "font/ttf",
+                    "font/otf",
+                    "font/opentype",
+                    "image/svg+xml",
+                    "text/css",
+                    "text/csv",
+                    "text/html",
+                    "text/javascript",
+                    "text/js",
+                    "text/plain",
+                    "text/richtext",
+                    "text/tab-separated-values",
+                    "text/xml",
+                    "text/x-script",
+                    "text/x-component",
+                    "text/x-java-source"
+                ],
+                "isCompressionEnabled": true
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Cdn/profiles', parameters('profiles_AzureTrainingCdnWestfalia_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Cdn/profiles/AzureTrainingCdnWestfalia/endpoints/azureplayground-prod-westfalia/origins/azureplaygroundmvcdemoprod-azurewebsites-net'.",
+            "type": "Microsoft.Cdn/profiles/endpoints/origins",
+            "name": "[concat(parameters('profiles_AzureTrainingCdnWestfalia_name'), '/', parameters('endpoints_azureplayground_prod_westfalia_name'), '/', parameters('origins_azureplaygroundmvcdemoprod_azurewebsites_net_name'))]",
+            "apiVersion": "2016-04-02",
+            "scale": null,
+            "properties": {
+                "hostName": "azureplaygroundmvcdemoprod.azurewebsites.net",
+                "httpPort": null,
+                "httpsPort": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Cdn/profiles', parameters('profiles_AzureTrainingCdnWestfalia_name'))]",
+                "[resourceId('Microsoft.Cdn/profiles/endpoints', parameters('profiles_AzureTrainingCdnWestfalia_name'), parameters('endpoints_azureplayground_prod_westfalia_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Cdn/profiles/AzureTrainingCdnWestfalia/endpoints/azureplayground-qa-westfalia/origins/azureplaygroundmvcdemoqa-azurewebsites-net'.",
+            "type": "Microsoft.Cdn/profiles/endpoints/origins",
+            "name": "[concat(parameters('profiles_AzureTrainingCdnWestfalia_name'), '/', parameters('endpoints_azureplayground_qa_westfalia_name'), '/', parameters('origins_azureplaygroundmvcdemoqa_azurewebsites_net_name'))]",
+            "apiVersion": "2016-04-02",
+            "scale": null,
+            "properties": {
+                "hostName": "azureplaygroundmvcdemoqa.azurewebsites.net",
+                "httpPort": null,
+                "httpsPort": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Cdn/profiles', parameters('profiles_AzureTrainingCdnWestfalia_name'))]",
+                "[resourceId('Microsoft.Cdn/profiles/endpoints', parameters('profiles_AzureTrainingCdnWestfalia_name'), parameters('endpoints_azureplayground_qa_westfalia_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.EventHub/namespaces/azureplayground-westfalia-training/AuthorizationRules/RootManageSharedAccessKey'.",
+            "type": "Microsoft.EventHub/namespaces/AuthorizationRules",
+            "name": "[concat(parameters('namespaces_azureplayground_westfalia_training_name'), '/', parameters('AuthorizationRules_RootManageSharedAccessKey_name'))]",
+            "apiVersion": "2017-04-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "rights": [
+                    "Listen",
+                    "Manage",
+                    "Send"
+                ]
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.EventHub/namespaces', parameters('namespaces_azureplayground_westfalia_training_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.EventHub/namespaces/azureplayground-westfalia-training/eventhubs/azureplaygroundhub'.",
+            "type": "Microsoft.EventHub/namespaces/eventhubs",
+            "name": "[concat(parameters('namespaces_azureplayground_westfalia_training_name'), '/', parameters('eventhubs_azureplaygroundhub_name'))]",
+            "apiVersion": "2017-04-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "messageRetentionInDays": 1,
+                "partitionCount": 2,
+                "status": "Active"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.EventHub/namespaces', parameters('namespaces_azureplayground_westfalia_training_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.EventHub/namespaces/azureplayground-westfalia-training/eventhubs/azureplaygroundhub/consumergroups/$Default'.",
+            "type": "Microsoft.EventHub/namespaces/eventhubs/consumergroups",
+            "name": "[concat(parameters('namespaces_azureplayground_westfalia_training_name'), '/', parameters('eventhubs_azureplaygroundhub_name'), '/', parameters('consumergroups_$Default_name'))]",
+            "apiVersion": "2017-04-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {},
+            "dependsOn": [
+                "[resourceId('Microsoft.EventHub/namespaces', parameters('namespaces_azureplayground_westfalia_training_name'))]",
+                "[resourceId('Microsoft.EventHub/namespaces/eventhubs', parameters('namespaces_azureplayground_westfalia_training_name'), parameters('eventhubs_azureplaygroundhub_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Sql/servers/azuretoolkit-westfaliatraining/advisors/CreateIndex'.",
+            "type": "Microsoft.Sql/servers/advisors",
+            "name": "[concat(parameters('servers_azuretoolkit_westfaliatraining_name'), '/', parameters('advisors_CreateIndex_name'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuretoolkit_westfaliatraining_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Sql/servers/azuretoolkit-westfaliatraining/advisors/DropIndex'.",
+            "type": "Microsoft.Sql/servers/advisors",
+            "name": "[concat(parameters('servers_azuretoolkit_westfaliatraining_name'), '/', parameters('advisors_DropIndex_name'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuretoolkit_westfaliatraining_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Sql/servers/azuretoolkit-westfaliatraining/advisors/DbParameterization'.",
+            "type": "Microsoft.Sql/servers/advisors",
+            "name": "[concat(parameters('servers_azuretoolkit_westfaliatraining_name'), '/', parameters('advisors_DbParameterization_name'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuretoolkit_westfaliatraining_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Sql/servers/azuretoolkit-westfaliatraining/advisors/DefragmentIndex'.",
+            "type": "Microsoft.Sql/servers/advisors",
+            "name": "[concat(parameters('servers_azuretoolkit_westfaliatraining_name'), '/', parameters('advisors_DefragmentIndex_name'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuretoolkit_westfaliatraining_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Sql/servers/azuretoolkit-westfaliatraining/advisors/ForceLastGoodPlan'.",
+            "type": "Microsoft.Sql/servers/advisors",
+            "name": "[concat(parameters('servers_azuretoolkit_westfaliatraining_name'), '/', parameters('advisors_ForceLastGoodPlan_name'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuretoolkit_westfaliatraining_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Sql/servers/azuretoolkit-westfaliatraining/auditingPolicies/Default'.",
+            "type": "Microsoft.Sql/servers/auditingPolicies",
+            "name": "[concat(parameters('servers_azuretoolkit_westfaliatraining_name'), '/', parameters('auditingPolicies_Default_name'))]",
+            "apiVersion": "2014-04-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "auditingState": "New",
+                "eventTypesToAudit": "PlainSQL_Success,PlainSQL_Failure,ParameterizedSQL_Success,ParameterizedSQL_Failure,StoredProcedure_Success,StoredProcedure_Failure,Login_Success,Login_Failure,TransactionManagement_Success,TransactionManagement_Failure",
+                "storageAccountName": null,
+                "storageAccountKey": null,
+                "storageAccountSecondaryKey": null,
+                "storageTableEndpoint": null,
+                "storageAccountResourceGroupName": null,
+                "storageAccountSubscriptionId": null,
+                "fullAuditLogsTableName": "SQLDBAuditLogsAzuretoolkitwestfaliatraining",
+                "auditLogsTableName": "Azuretoolkitwestfaliatraining",
+                "retentionDays": "0"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuretoolkit_westfaliatraining_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Sql/servers/azuretoolkit-westfaliatraining/databases/AzurePlaygroundMvcDemo_Northwind_PROD_db'.",
+            "type": "Microsoft.Sql/servers/databases",
+            "sku": {
+                "name": "S0",
+                "tier": "Standard"
+            },
+            "kind": "v12.0,user",
+            "name": "[concat(parameters('servers_azuretoolkit_westfaliatraining_name'), '/', parameters('databases_AzurePlaygroundMvcDemo_Northwind_PROD_db_name'))]",
+            "apiVersion": "2017-03-01-preview",
+            "location": "eastus",
+            "scale": null,
+            "properties": {
+                "collation": "SQL_Latin1_General_CP1_CI_AS",
+                "maxSizeBytes": 1073741824,
+                "catalogCollation": "SQL_Latin1_General_CP1_CI_AS",
+                "zoneRedundant": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuretoolkit_westfaliatraining_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Sql/servers/azuretoolkit-westfaliatraining/databases/AzurePlaygroundMvcDemo_Northwind_QA_db'.",
+            "type": "Microsoft.Sql/servers/databases",
+            "sku": {
+                "name": "S0",
+                "tier": "Standard"
+            },
+            "kind": "v12.0,user",
+            "name": "[concat(parameters('servers_azuretoolkit_westfaliatraining_name'), '/', parameters('databases_AzurePlaygroundMvcDemo_Northwind_QA_db_name'))]",
+            "apiVersion": "2017-03-01-preview",
+            "location": "eastus",
+            "scale": null,
+            "properties": {
+                "collation": "SQL_Latin1_General_CP1_CI_AS",
+                "maxSizeBytes": 1073741824,
+                "catalogCollation": "SQL_Latin1_General_CP1_CI_AS",
+                "zoneRedundant": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuretoolkit_westfaliatraining_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Sql/servers/azuretoolkit-westfaliatraining/databases/azuretoolkit'.",
+            "type": "Microsoft.Sql/servers/databases",
+            "sku": {
+                "name": "Basic",
+                "tier": "Basic"
+            },
+            "kind": "v12.0,user",
+            "name": "[concat(parameters('servers_azuretoolkit_westfaliatraining_name'), '/', parameters('databases_azuretoolkit_name'))]",
+            "apiVersion": "2017-03-01-preview",
+            "location": "eastus",
+            "scale": null,
+            "properties": {
+                "collation": "SQL_Latin1_General_CP1_CI_AS",
+                "maxSizeBytes": 2147483648,
+                "catalogCollation": "SQL_Latin1_General_CP1_CI_AS",
+                "zoneRedundant": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuretoolkit_westfaliatraining_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Sql/servers/azuretoolkit-westfaliatraining/firewallRules/AllowAllWindowsAzureIps'.",
+            "type": "Microsoft.Sql/servers/firewallRules",
+            "name": "[concat(parameters('servers_azuretoolkit_westfaliatraining_name'), '/', parameters('firewallRules_AllowAllWindowsAzureIps_name'))]",
+            "apiVersion": "2015-05-01-preview",
+            "scale": null,
+            "properties": {
+                "startIpAddress": "0.0.0.0",
+                "endIpAddress": "0.0.0.0"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuretoolkit_westfaliatraining_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Sql/servers/azuretoolkit-westfaliatraining/firewallRules/Westfalia'.",
+            "type": "Microsoft.Sql/servers/firewallRules",
+            "name": "[concat(parameters('servers_azuretoolkit_westfaliatraining_name'), '/', parameters('firewallRules_Westfalia_name'))]",
+            "apiVersion": "2015-05-01-preview",
+            "scale": null,
+            "properties": {
+                "startIpAddress": "4.49.116.174",
+                "endIpAddress": "4.49.116.174"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuretoolkit_westfaliatraining_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Sql/servers/azuretoolkit-westfaliatraining/encryptionProtector/current'.",
+            "type": "Microsoft.Sql/servers/encryptionProtector",
+            "kind": "servicemanaged",
+            "name": "[concat(parameters('servers_azuretoolkit_westfaliatraining_name'), '/', parameters('encryptionProtector_current_name'))]",
+            "apiVersion": "2015-05-01-preview",
+            "scale": null,
+            "properties": {
+                "serverKeyName": "ServiceManaged",
+                "serverKeyType": "ServiceManaged"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuretoolkit_westfaliatraining_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Sql/servers/azuretoolkit-westfaliatraining/keys/ServiceManaged'.",
+            "type": "Microsoft.Sql/servers/keys",
+            "kind": "servicemanaged",
+            "name": "[concat(parameters('servers_azuretoolkit_westfaliatraining_name'), '/', parameters('keys_ServiceManaged_name'))]",
+            "apiVersion": "2015-05-01-preview",
+            "scale": null,
+            "properties": {
+                "serverKeyType": "[parameters('keys_ServiceManaged_name')]"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuretoolkit_westfaliatraining_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Sql/servers/azuretoolkit-westfaliatraining/databases/AzurePlaygroundMvcDemo_Northwind_PROD_db/auditingPolicies/Default'.",
+            "type": "Microsoft.Sql/servers/databases/auditingPolicies",
+            "name": "[concat(parameters('servers_azuretoolkit_westfaliatraining_name'), '/', parameters('databases_AzurePlaygroundMvcDemo_Northwind_PROD_db_name'), '/', parameters('auditingPolicies_Default_name_4'))]",
+            "apiVersion": "2014-04-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "auditingState": "New",
+                "eventTypesToAudit": "PlainSQL_Success,PlainSQL_Failure,ParameterizedSQL_Success,ParameterizedSQL_Failure,StoredProcedure_Success,StoredProcedure_Failure,Login_Success,Login_Failure,TransactionManagement_Success,TransactionManagement_Failure",
+                "storageAccountName": null,
+                "storageAccountKey": null,
+                "storageAccountSecondaryKey": null,
+                "storageTableEndpoint": null,
+                "storageAccountResourceGroupName": null,
+                "storageAccountSubscriptionId": null,
+                "useServerDefault": "Enabled",
+                "fullAuditLogsTableName": "SQLDBAuditLogsAzuretoolkitwestfaliaAzureplaygroundmvcde",
+                "auditLogsTableName": "AzuretoolkitwestfaliaAzureplaygroundmvcde",
+                "retentionDays": "0"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuretoolkit_westfaliatraining_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_azuretoolkit_westfaliatraining_name'), parameters('databases_AzurePlaygroundMvcDemo_Northwind_PROD_db_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Sql/servers/azuretoolkit-westfaliatraining/databases/AzurePlaygroundMvcDemo_Northwind_PROD_db/geoBackupPolicies/Default'.",
+            "type": "Microsoft.Sql/servers/databases/geoBackupPolicies",
+            "name": "[concat(parameters('servers_azuretoolkit_westfaliatraining_name'), '/', parameters('databases_AzurePlaygroundMvcDemo_Northwind_PROD_db_name'), '/', parameters('geoBackupPolicies_Default_name_3'))]",
+            "apiVersion": "2014-04-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "state": "Enabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuretoolkit_westfaliatraining_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_azuretoolkit_westfaliatraining_name'), parameters('databases_AzurePlaygroundMvcDemo_Northwind_PROD_db_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Sql/servers/azuretoolkit-westfaliatraining/databases/AzurePlaygroundMvcDemo_Northwind_PROD_db/transparentDataEncryption/current'.",
+            "type": "Microsoft.Sql/servers/databases/transparentDataEncryption",
+            "name": "[concat(parameters('servers_azuretoolkit_westfaliatraining_name'), '/', parameters('databases_AzurePlaygroundMvcDemo_Northwind_PROD_db_name'), '/', parameters('transparentDataEncryption_current_name_3'))]",
+            "apiVersion": "2014-04-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "status": "Enabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuretoolkit_westfaliatraining_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_azuretoolkit_westfaliatraining_name'), parameters('databases_AzurePlaygroundMvcDemo_Northwind_PROD_db_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Sql/servers/azuretoolkit-westfaliatraining/databases/AzurePlaygroundMvcDemo_Northwind_QA_db/auditingPolicies/Default'.",
+            "type": "Microsoft.Sql/servers/databases/auditingPolicies",
+            "name": "[concat(parameters('servers_azuretoolkit_westfaliatraining_name'), '/', parameters('databases_AzurePlaygroundMvcDemo_Northwind_QA_db_name'), '/', parameters('auditingPolicies_Default_name_3'))]",
+            "apiVersion": "2014-04-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "auditingState": "New",
+                "eventTypesToAudit": "PlainSQL_Success,PlainSQL_Failure,ParameterizedSQL_Success,ParameterizedSQL_Failure,StoredProcedure_Success,StoredProcedure_Failure,Login_Success,Login_Failure,TransactionManagement_Success,TransactionManagement_Failure",
+                "storageAccountName": null,
+                "storageAccountKey": null,
+                "storageAccountSecondaryKey": null,
+                "storageTableEndpoint": null,
+                "storageAccountResourceGroupName": null,
+                "storageAccountSubscriptionId": null,
+                "useServerDefault": "Enabled",
+                "fullAuditLogsTableName": "SQLDBAuditLogsAzuretoolkitwestfaliaAzureplaygroundmvcde",
+                "auditLogsTableName": "AzuretoolkitwestfaliaAzureplaygroundmvcde",
+                "retentionDays": "0"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuretoolkit_westfaliatraining_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_azuretoolkit_westfaliatraining_name'), parameters('databases_AzurePlaygroundMvcDemo_Northwind_QA_db_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Sql/servers/azuretoolkit-westfaliatraining/databases/AzurePlaygroundMvcDemo_Northwind_QA_db/geoBackupPolicies/Default'.",
+            "type": "Microsoft.Sql/servers/databases/geoBackupPolicies",
+            "name": "[concat(parameters('servers_azuretoolkit_westfaliatraining_name'), '/', parameters('databases_AzurePlaygroundMvcDemo_Northwind_QA_db_name'), '/', parameters('geoBackupPolicies_Default_name_2'))]",
+            "apiVersion": "2014-04-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "state": "Enabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuretoolkit_westfaliatraining_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_azuretoolkit_westfaliatraining_name'), parameters('databases_AzurePlaygroundMvcDemo_Northwind_QA_db_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Sql/servers/azuretoolkit-westfaliatraining/databases/AzurePlaygroundMvcDemo_Northwind_QA_db/transparentDataEncryption/current'.",
+            "type": "Microsoft.Sql/servers/databases/transparentDataEncryption",
+            "name": "[concat(parameters('servers_azuretoolkit_westfaliatraining_name'), '/', parameters('databases_AzurePlaygroundMvcDemo_Northwind_QA_db_name'), '/', parameters('transparentDataEncryption_current_name_2'))]",
+            "apiVersion": "2014-04-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "status": "Enabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuretoolkit_westfaliatraining_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_azuretoolkit_westfaliatraining_name'), parameters('databases_AzurePlaygroundMvcDemo_Northwind_QA_db_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Sql/servers/azuretoolkit-westfaliatraining/databases/azuretoolkit/advisors/CreateIndex'.",
+            "type": "Microsoft.Sql/servers/databases/advisors",
+            "name": "[concat(parameters('servers_azuretoolkit_westfaliatraining_name'), '/', parameters('databases_azuretoolkit_name'), '/', parameters('advisors_CreateIndex_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuretoolkit_westfaliatraining_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_azuretoolkit_westfaliatraining_name'), parameters('databases_azuretoolkit_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Sql/servers/azuretoolkit-westfaliatraining/databases/azuretoolkit/advisors/DropIndex'.",
+            "type": "Microsoft.Sql/servers/databases/advisors",
+            "name": "[concat(parameters('servers_azuretoolkit_westfaliatraining_name'), '/', parameters('databases_azuretoolkit_name'), '/', parameters('advisors_DropIndex_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuretoolkit_westfaliatraining_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_azuretoolkit_westfaliatraining_name'), parameters('databases_azuretoolkit_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Sql/servers/azuretoolkit-westfaliatraining/databases/azuretoolkit/advisors/DbParameterization'.",
+            "type": "Microsoft.Sql/servers/databases/advisors",
+            "name": "[concat(parameters('servers_azuretoolkit_westfaliatraining_name'), '/', parameters('databases_azuretoolkit_name'), '/', parameters('advisors_DbParameterization_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuretoolkit_westfaliatraining_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_azuretoolkit_westfaliatraining_name'), parameters('databases_azuretoolkit_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Sql/servers/azuretoolkit-westfaliatraining/databases/azuretoolkit/advisors/DefragmentIndex'.",
+            "type": "Microsoft.Sql/servers/databases/advisors",
+            "name": "[concat(parameters('servers_azuretoolkit_westfaliatraining_name'), '/', parameters('databases_azuretoolkit_name'), '/', parameters('advisors_DefragmentIndex_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuretoolkit_westfaliatraining_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_azuretoolkit_westfaliatraining_name'), parameters('databases_azuretoolkit_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Sql/servers/azuretoolkit-westfaliatraining/databases/azuretoolkit/advisors/ForceLastGoodPlan'.",
+            "type": "Microsoft.Sql/servers/databases/advisors",
+            "name": "[concat(parameters('servers_azuretoolkit_westfaliatraining_name'), '/', parameters('databases_azuretoolkit_name'), '/', parameters('advisors_ForceLastGoodPlan_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuretoolkit_westfaliatraining_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_azuretoolkit_westfaliatraining_name'), parameters('databases_azuretoolkit_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Sql/servers/azuretoolkit-westfaliatraining/databases/azuretoolkit/auditingPolicies/Default'.",
+            "type": "Microsoft.Sql/servers/databases/auditingPolicies",
+            "name": "[concat(parameters('servers_azuretoolkit_westfaliatraining_name'), '/', parameters('databases_azuretoolkit_name'), '/', parameters('auditingPolicies_Default_name_2'))]",
+            "apiVersion": "2014-04-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "auditingState": "New",
+                "eventTypesToAudit": "PlainSQL_Success,PlainSQL_Failure,ParameterizedSQL_Success,ParameterizedSQL_Failure,StoredProcedure_Success,StoredProcedure_Failure,Login_Success,Login_Failure,TransactionManagement_Success,TransactionManagement_Failure",
+                "storageAccountName": null,
+                "storageAccountKey": null,
+                "storageAccountSecondaryKey": null,
+                "storageTableEndpoint": null,
+                "storageAccountResourceGroupName": null,
+                "storageAccountSubscriptionId": null,
+                "useServerDefault": "Enabled",
+                "fullAuditLogsTableName": "SQLDBAuditLogsAzuretoolkitwestfaliatrainingAzuretoolkit",
+                "auditLogsTableName": "AzuretoolkitwestfaliatrainingAzuretoolkit",
+                "retentionDays": "0"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuretoolkit_westfaliatraining_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_azuretoolkit_westfaliatraining_name'), parameters('databases_azuretoolkit_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Sql/servers/azuretoolkit-westfaliatraining/databases/azuretoolkit/geoBackupPolicies/Default'.",
+            "type": "Microsoft.Sql/servers/databases/geoBackupPolicies",
+            "name": "[concat(parameters('servers_azuretoolkit_westfaliatraining_name'), '/', parameters('databases_azuretoolkit_name'), '/', parameters('geoBackupPolicies_Default_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "state": "Enabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuretoolkit_westfaliatraining_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_azuretoolkit_westfaliatraining_name'), parameters('databases_azuretoolkit_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Sql/servers/azuretoolkit-westfaliatraining/databases/azuretoolkit/transparentDataEncryption/current'.",
+            "type": "Microsoft.Sql/servers/databases/transparentDataEncryption",
+            "name": "[concat(parameters('servers_azuretoolkit_westfaliatraining_name'), '/', parameters('databases_azuretoolkit_name'), '/', parameters('transparentDataEncryption_current_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "status": "Enabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuretoolkit_westfaliatraining_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_azuretoolkit_westfaliatraining_name'), parameters('databases_azuretoolkit_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Sql/servers/azuretoolkit-westfaliatraining/databases/master/auditingPolicies/Default'.",
+            "type": "Microsoft.Sql/servers/databases/auditingPolicies",
+            "name": "[concat(parameters('servers_azuretoolkit_westfaliatraining_name'), '/', parameters('databases_master_name'), '/', parameters('auditingPolicies_Default_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "auditingState": "New",
+                "eventTypesToAudit": "PlainSQL_Success,PlainSQL_Failure,ParameterizedSQL_Success,ParameterizedSQL_Failure,StoredProcedure_Success,StoredProcedure_Failure,Login_Success,Login_Failure,TransactionManagement_Success,TransactionManagement_Failure",
+                "storageAccountName": null,
+                "storageAccountKey": null,
+                "storageAccountSecondaryKey": null,
+                "storageTableEndpoint": null,
+                "storageAccountResourceGroupName": null,
+                "storageAccountSubscriptionId": null,
+                "useServerDefault": "Enabled",
+                "fullAuditLogsTableName": "SQLDBAuditLogsAzuretoolkitwestfaliatrainingMaster",
+                "auditLogsTableName": "AzuretoolkitwestfaliatrainingMaster",
+                "retentionDays": "0"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuretoolkit_westfaliatraining_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Sql/servers/azuretoolkit-westfaliatraining/databases/master/geoBackupPolicies/Default'.",
+            "type": "Microsoft.Sql/servers/databases/geoBackupPolicies",
+            "name": "[concat(parameters('servers_azuretoolkit_westfaliatraining_name'), '/', parameters('databases_master_name'), '/', parameters('geoBackupPolicies_Default_name'))]",
+            "apiVersion": "2014-04-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "state": "Enabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuretoolkit_westfaliatraining_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Sql/servers/azuretoolkit-westfaliatraining/databases/master/transparentDataEncryption/current'.",
+            "type": "Microsoft.Sql/servers/databases/transparentDataEncryption",
+            "name": "[concat(parameters('servers_azuretoolkit_westfaliatraining_name'), '/', parameters('databases_master_name'), '/', parameters('transparentDataEncryption_current_name'))]",
+            "apiVersion": "2014-04-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "status": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_azuretoolkit_westfaliatraining_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/emailpusherwestfalia/config/web'.",
+            "type": "Microsoft.Web/sites/config",
+            "name": "[concat(parameters('sites_emailpusherwestfalia_name'), '/', parameters('config_web_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "numberOfWorkers": 1,
+                "defaultDocuments": [
+                    "Default.htm",
+                    "Default.html",
+                    "Default.asp",
+                    "index.htm",
+                    "index.html",
+                    "iisstart.htm",
+                    "default.aspx",
+                    "index.php"
+                ],
+                "netFrameworkVersion": "v4.0",
+                "phpVersion": "5.6",
+                "pythonVersion": "",
+                "nodeVersion": "",
+                "linuxFxVersion": "",
+                "windowsFxVersion": null,
+                "requestTracingEnabled": false,
+                "remoteDebuggingEnabled": false,
+                "remoteDebuggingVersion": "VS2017",
+                "httpLoggingEnabled": false,
+                "logsDirectorySizeLimit": 35,
+                "detailedErrorLoggingEnabled": false,
+                "publishingUsername": "$emailpusherwestfalia",
+                "publishingPassword": null,
+                "appSettings": null,
+                "azureStorageAccounts": {},
+                "metadata": null,
+                "connectionStrings": null,
+                "machineKey": null,
+                "handlerMappings": null,
+                "documentRoot": null,
+                "scmType": "VSTSRM",
+                "use32BitWorkerProcess": true,
+                "webSocketsEnabled": false,
+                "alwaysOn": false,
+                "javaVersion": null,
+                "javaContainer": null,
+                "javaContainerVersion": null,
+                "appCommandLine": "",
+                "managedPipelineMode": "Integrated",
+                "virtualApplications": [
+                    {
+                        "virtualPath": "/",
+                        "physicalPath": "site\\wwwroot",
+                        "preloadEnabled": false,
+                        "virtualDirectories": null
+                    }
+                ],
+                "winAuthAdminState": 0,
+                "winAuthTenantState": 0,
+                "customAppPoolIdentityAdminState": false,
+                "customAppPoolIdentityTenantState": false,
+                "runtimeADUser": null,
+                "runtimeADUserPassword": null,
+                "loadBalancing": "LeastRequests",
+                "routingRules": [],
+                "experiments": {
+                    "rampUpRules": []
+                },
+                "limits": null,
+                "autoHealEnabled": false,
+                "autoHealRules": null,
+                "tracingOptions": null,
+                "vnetName": "",
+                "siteAuthEnabled": false,
+                "siteAuthSettings": {
+                    "enabled": null,
+                    "unauthenticatedClientAction": null,
+                    "tokenStoreEnabled": null,
+                    "allowedExternalRedirectUrls": null,
+                    "defaultProvider": null,
+                    "clientId": null,
+                    "clientSecret": null,
+                    "issuer": null,
+                    "allowedAudiences": null,
+                    "additionalLoginParams": null,
+                    "isAadAutoProvisioned": false,
+                    "googleClientId": null,
+                    "googleClientSecret": null,
+                    "googleOAuthScopes": null,
+                    "facebookAppId": null,
+                    "facebookAppSecret": null,
+                    "facebookOAuthScopes": null,
+                    "twitterConsumerKey": null,
+                    "twitterConsumerSecret": null,
+                    "microsoftAccountClientId": null,
+                    "microsoftAccountClientSecret": null,
+                    "microsoftAccountOAuthScopes": null
+                },
+                "cors": {
+                    "allowedOrigins": [
+                        "https://functions.azure.com",
+                        "https://functions-staging.azure.com",
+                        "https://functions-next.azure.com"
+                    ]
+                },
+                "push": null,
+                "apiDefinition": null,
+                "autoSwapSlotName": null,
+                "localMySqlEnabled": false,
+                "managedServiceIdentityId": null,
+                "xManagedServiceIdentityId": null,
+                "ipSecurityRestrictions": null,
+                "http20Enabled": false,
+                "minTlsVersion": "1.2",
+                "ftpsState": "AllAllowed",
+                "reservedInstanceCount": 0
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_emailpusherwestfalia_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/emailpusherwestfalia/deployments/501537822993568'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_emailpusherwestfalia_name'), '/', parameters('deployments_501537822993568_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_501537822993568_name')]",
+                "status": 4,
+                "author_email": "",
+                "author": "Joshua Pavoncello",
+                "deployer": "VSTS",
+                "message": "{\"type\":\"Deployment\",\"commitId\":\"f3b16431124dc7a0a6664037c1834f37203c9419\",\"buildId\":\"31\",\"releaseId\":\"50\",\"buildNumber\":\"20180924.6\",\"releaseName\":\"Release-7\",\"repoProvider\":\"TfsGit\",\"repoName\":\"AzurePlayground\",\"collectionUrl\":\"https://dev.azure.com/JPavoncello/\",\"teamProject\":\"9b1c0c31-183f-4d36-8d5d-6a4f58ba2a15\",\"slotName\":\"production\"}",
+                "start_time": "2018-09-24T21:03:14.693012Z",
+                "end_time": "2018-09-24T21:03:14.693012Z",
+                "active": true
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_emailpusherwestfalia_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/emailpusherwestfalia/deployments/471537810598432'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_emailpusherwestfalia_name'), '/', parameters('deployments_471537810598432_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_471537810598432_name')]",
+                "status": 4,
+                "author_email": "",
+                "author": "Joshua Pavoncello",
+                "deployer": "VSTS",
+                "message": "{\"type\":\"Deployment\",\"commitId\":\"f3b16431124dc7a0a6664037c1834f37203c9419\",\"buildId\":\"31\",\"releaseId\":\"47\",\"buildNumber\":\"20180924.6\",\"releaseName\":\"Release-8\",\"repoProvider\":\"TfsGit\",\"repoName\":\"AzurePlayground\",\"collectionUrl\":\"https://dev.azure.com/JPavoncello/\",\"teamProject\":\"9b1c0c31-183f-4d36-8d5d-6a4f58ba2a15\",\"slotName\":\"production\"}",
+                "start_time": "2018-09-24T17:36:39.3053294Z",
+                "end_time": "2018-09-24T17:36:39.3053294Z",
+                "active": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_emailpusherwestfalia_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/emailpusherwestfalia/deployments/441537807112859'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_emailpusherwestfalia_name'), '/', parameters('deployments_441537807112859_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_441537807112859_name')]",
+                "status": 4,
+                "author_email": "",
+                "author": "Joshua Pavoncello",
+                "deployer": "VSTS",
+                "message": "{\"type\":\"Deployment\",\"commitId\":\"af8038a4bfd907c8365c5176846c630ad1ba52a8\",\"buildId\":\"30\",\"releaseId\":\"44\",\"buildNumber\":\"20180924.5\",\"releaseName\":\"Release-7\",\"repoProvider\":\"TfsGit\",\"repoName\":\"AzurePlayground\",\"collectionUrl\":\"https://dev.azure.com/JPavoncello/\",\"teamProject\":\"9b1c0c31-183f-4d36-8d5d-6a4f58ba2a15\",\"slotName\":\"production\"}",
+                "start_time": "2018-09-24T16:38:35.0233037Z",
+                "end_time": "2018-09-24T16:38:35.0233037Z",
+                "active": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_emailpusherwestfalia_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/emailpusherwestfalia/deployments/411537801399558'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_emailpusherwestfalia_name'), '/', parameters('deployments_411537801399558_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_411537801399558_name')]",
+                "status": 4,
+                "author_email": "",
+                "author": "Joshua Pavoncello",
+                "deployer": "VSTS",
+                "message": "{\"type\":\"Deployment\",\"commitId\":\"14a88162ed86f2ee1d30a896c2947bfcd909fa7d\",\"buildId\":\"29\",\"releaseId\":\"41\",\"buildNumber\":\"20180924.4\",\"releaseName\":\"Release-6\",\"repoProvider\":\"TfsGit\",\"repoName\":\"AzurePlayground\",\"collectionUrl\":\"https://dev.azure.com/JPavoncello/\",\"teamProject\":\"9b1c0c31-183f-4d36-8d5d-6a4f58ba2a15\",\"slotName\":\"production\"}",
+                "start_time": "2018-09-24T15:03:25.14918Z",
+                "end_time": "2018-09-24T15:03:25.14918Z",
+                "active": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_emailpusherwestfalia_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/emailpusherwestfalia/hostNameBindings/emailpusherwestfalia.azurewebsites.net'.",
+            "type": "Microsoft.Web/sites/hostNameBindings",
+            "name": "[concat(parameters('sites_emailpusherwestfalia_name'), '/', parameters('hostNameBindings_emailpusherwestfalia.azurewebsites.net_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "siteName": "emailpusherwestfalia",
+                "domainId": null,
+                "hostNameType": "Verified"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_emailpusherwestfalia_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/emailpusherwestfaliaqa/config/web'.",
+            "type": "Microsoft.Web/sites/config",
+            "name": "[concat(parameters('sites_emailpusherwestfaliaqa_name'), '/', parameters('config_web_name_1'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "numberOfWorkers": 1,
+                "defaultDocuments": [
+                    "Default.htm",
+                    "Default.html",
+                    "Default.asp",
+                    "index.htm",
+                    "index.html",
+                    "iisstart.htm",
+                    "default.aspx",
+                    "index.php"
+                ],
+                "netFrameworkVersion": "v4.0",
+                "phpVersion": "5.6",
+                "pythonVersion": "",
+                "nodeVersion": "",
+                "linuxFxVersion": "",
+                "windowsFxVersion": null,
+                "requestTracingEnabled": false,
+                "remoteDebuggingEnabled": false,
+                "remoteDebuggingVersion": "VS2012",
+                "httpLoggingEnabled": false,
+                "logsDirectorySizeLimit": 35,
+                "detailedErrorLoggingEnabled": false,
+                "publishingUsername": "$emailpusherwestfaliaqa",
+                "publishingPassword": null,
+                "appSettings": null,
+                "azureStorageAccounts": {},
+                "metadata": null,
+                "connectionStrings": null,
+                "machineKey": null,
+                "handlerMappings": null,
+                "documentRoot": null,
+                "scmType": "VSTSRM",
+                "use32BitWorkerProcess": true,
+                "webSocketsEnabled": false,
+                "alwaysOn": false,
+                "javaVersion": null,
+                "javaContainer": null,
+                "javaContainerVersion": null,
+                "appCommandLine": "",
+                "managedPipelineMode": "Integrated",
+                "virtualApplications": [
+                    {
+                        "virtualPath": "/",
+                        "physicalPath": "site\\wwwroot",
+                        "preloadEnabled": false,
+                        "virtualDirectories": null
+                    }
+                ],
+                "winAuthAdminState": 0,
+                "winAuthTenantState": 0,
+                "customAppPoolIdentityAdminState": false,
+                "customAppPoolIdentityTenantState": false,
+                "runtimeADUser": null,
+                "runtimeADUserPassword": null,
+                "loadBalancing": "LeastRequests",
+                "routingRules": [],
+                "experiments": {
+                    "rampUpRules": []
+                },
+                "limits": null,
+                "autoHealEnabled": false,
+                "autoHealRules": null,
+                "tracingOptions": null,
+                "vnetName": "",
+                "siteAuthEnabled": false,
+                "siteAuthSettings": {
+                    "enabled": null,
+                    "unauthenticatedClientAction": null,
+                    "tokenStoreEnabled": null,
+                    "allowedExternalRedirectUrls": null,
+                    "defaultProvider": null,
+                    "clientId": null,
+                    "clientSecret": null,
+                    "issuer": null,
+                    "allowedAudiences": null,
+                    "additionalLoginParams": null,
+                    "isAadAutoProvisioned": false,
+                    "googleClientId": null,
+                    "googleClientSecret": null,
+                    "googleOAuthScopes": null,
+                    "facebookAppId": null,
+                    "facebookAppSecret": null,
+                    "facebookOAuthScopes": null,
+                    "twitterConsumerKey": null,
+                    "twitterConsumerSecret": null,
+                    "microsoftAccountClientId": null,
+                    "microsoftAccountClientSecret": null,
+                    "microsoftAccountOAuthScopes": null
+                },
+                "cors": {
+                    "allowedOrigins": [
+                        "https://functions.azure.com",
+                        "https://functions-staging.azure.com",
+                        "https://functions-next.azure.com"
+                    ]
+                },
+                "push": null,
+                "apiDefinition": null,
+                "autoSwapSlotName": null,
+                "localMySqlEnabled": false,
+                "managedServiceIdentityId": null,
+                "xManagedServiceIdentityId": null,
+                "ipSecurityRestrictions": null,
+                "http20Enabled": false,
+                "minTlsVersion": "1.2",
+                "ftpsState": "AllAllowed",
+                "reservedInstanceCount": 0
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_emailpusherwestfaliaqa_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/emailpusherwestfaliaqa/deployments/491537822980405'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_emailpusherwestfaliaqa_name'), '/', parameters('deployments_491537822980405_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_491537822980405_name')]",
+                "status": 4,
+                "author_email": "",
+                "author": "Joshua Pavoncello",
+                "deployer": "VSTS",
+                "message": "{\"type\":\"Deployment\",\"commitId\":\"f3b16431124dc7a0a6664037c1834f37203c9419\",\"buildId\":\"31\",\"releaseId\":\"49\",\"buildNumber\":\"20180924.6\",\"releaseName\":\"Release-35\",\"repoProvider\":\"TfsGit\",\"repoName\":\"AzurePlayground\",\"collectionUrl\":\"https://dev.azure.com/JPavoncello/\",\"teamProject\":\"9b1c0c31-183f-4d36-8d5d-6a4f58ba2a15\",\"slotName\":\"production\"}",
+                "start_time": "2018-09-24T21:03:05.2407102Z",
+                "end_time": "2018-09-24T21:03:05.2407102Z",
+                "active": true
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_emailpusherwestfaliaqa_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/emailpusherwestfaliaqa/hostNameBindings/emailpusherwestfaliaqa.azurewebsites.net'.",
+            "type": "Microsoft.Web/sites/hostNameBindings",
+            "name": "[concat(parameters('sites_emailpusherwestfaliaqa_name'), '/', parameters('hostNameBindings_emailpusherwestfaliaqa.azurewebsites.net_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "siteName": "emailpusherwestfaliaqa",
+                "domainId": null,
+                "hostNameType": "Verified"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_emailpusherwestfaliaqa_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/AzurePlaygroundMvcDemoQA/config/web'.",
+            "type": "Microsoft.Web/sites/config",
+            "name": "[concat(parameters('sites_AzurePlaygroundMvcDemoQA_name'), '/', parameters('config_web_name_2'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "tags": {
+                "hidden-related:/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Web/serverfarms/FreeServicePlan": "empty"
+            },
+            "scale": null,
+            "properties": {
+                "numberOfWorkers": 1,
+                "defaultDocuments": [
+                    "Default.htm",
+                    "Default.html",
+                    "Default.asp",
+                    "index.htm",
+                    "index.html",
+                    "iisstart.htm",
+                    "default.aspx",
+                    "index.php",
+                    "hostingstart.html"
+                ],
+                "netFrameworkVersion": "v4.0",
+                "phpVersion": "5.6",
+                "pythonVersion": "",
+                "nodeVersion": "",
+                "linuxFxVersion": "",
+                "windowsFxVersion": null,
+                "requestTracingEnabled": false,
+                "remoteDebuggingEnabled": false,
+                "remoteDebuggingVersion": "VS2017",
+                "httpLoggingEnabled": false,
+                "logsDirectorySizeLimit": 35,
+                "detailedErrorLoggingEnabled": false,
+                "publishingUsername": "$AzurePlaygroundMvcDemoQA",
+                "publishingPassword": null,
+                "appSettings": null,
+                "azureStorageAccounts": {},
+                "metadata": null,
+                "connectionStrings": null,
+                "machineKey": null,
+                "handlerMappings": null,
+                "documentRoot": null,
+                "scmType": "VSTSRM",
+                "use32BitWorkerProcess": true,
+                "webSocketsEnabled": false,
+                "alwaysOn": false,
+                "javaVersion": null,
+                "javaContainer": null,
+                "javaContainerVersion": null,
+                "appCommandLine": "",
+                "managedPipelineMode": "Integrated",
+                "virtualApplications": [
+                    {
+                        "virtualPath": "/",
+                        "physicalPath": "site\\wwwroot",
+                        "preloadEnabled": false,
+                        "virtualDirectories": null
+                    }
+                ],
+                "winAuthAdminState": 0,
+                "winAuthTenantState": 0,
+                "customAppPoolIdentityAdminState": false,
+                "customAppPoolIdentityTenantState": false,
+                "runtimeADUser": null,
+                "runtimeADUserPassword": null,
+                "loadBalancing": "LeastRequests",
+                "routingRules": [],
+                "experiments": {
+                    "rampUpRules": []
+                },
+                "limits": null,
+                "autoHealEnabled": false,
+                "autoHealRules": null,
+                "tracingOptions": null,
+                "vnetName": "",
+                "siteAuthEnabled": false,
+                "siteAuthSettings": {
+                    "enabled": null,
+                    "unauthenticatedClientAction": null,
+                    "tokenStoreEnabled": null,
+                    "allowedExternalRedirectUrls": null,
+                    "defaultProvider": null,
+                    "clientId": null,
+                    "clientSecret": null,
+                    "issuer": null,
+                    "allowedAudiences": null,
+                    "additionalLoginParams": null,
+                    "isAadAutoProvisioned": false,
+                    "googleClientId": null,
+                    "googleClientSecret": null,
+                    "googleOAuthScopes": null,
+                    "facebookAppId": null,
+                    "facebookAppSecret": null,
+                    "facebookOAuthScopes": null,
+                    "twitterConsumerKey": null,
+                    "twitterConsumerSecret": null,
+                    "microsoftAccountClientId": null,
+                    "microsoftAccountClientSecret": null,
+                    "microsoftAccountOAuthScopes": null
+                },
+                "cors": null,
+                "push": null,
+                "apiDefinition": null,
+                "autoSwapSlotName": null,
+                "localMySqlEnabled": false,
+                "managedServiceIdentityId": 967,
+                "xManagedServiceIdentityId": null,
+                "ipSecurityRestrictions": null,
+                "http20Enabled": false,
+                "minTlsVersion": "1.2",
+                "ftpsState": "AllAllowed",
+                "reservedInstanceCount": 0
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_AzurePlaygroundMvcDemoQA_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/AzurePlaygroundMvcDemoQA/deployments/491537822954322'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_AzurePlaygroundMvcDemoQA_name'), '/', parameters('deployments_491537822954322_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_491537822954322_name')]",
+                "status": 4,
+                "author_email": "",
+                "author": "Joshua Pavoncello",
+                "deployer": "VSTS",
+                "message": "{\"type\":\"Deployment\",\"commitId\":\"f3b16431124dc7a0a6664037c1834f37203c9419\",\"buildId\":\"31\",\"releaseId\":\"49\",\"buildNumber\":\"20180924.6\",\"releaseName\":\"Release-35\",\"repoProvider\":\"TfsGit\",\"repoName\":\"AzurePlayground\",\"collectionUrl\":\"https://dev.azure.com/JPavoncello/\",\"teamProject\":\"9b1c0c31-183f-4d36-8d5d-6a4f58ba2a15\",\"slotName\":\"production\"}",
+                "start_time": "2018-09-24T21:02:35.2201773Z",
+                "end_time": "2018-09-24T21:02:35.2201773Z",
+                "active": true
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_AzurePlaygroundMvcDemoQA_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/AzurePlaygroundMvcDemoQA/deployments/451537810634875'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_AzurePlaygroundMvcDemoQA_name'), '/', parameters('deployments_451537810634875_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_451537810634875_name')]",
+                "status": 4,
+                "author_email": "",
+                "author": "Joshua Pavoncello",
+                "deployer": "VSTS",
+                "message": "{\"type\":\"Deployment\",\"commitId\":\"f3b16431124dc7a0a6664037c1834f37203c9419\",\"buildId\":\"31\",\"releaseId\":\"45\",\"buildNumber\":\"20180924.6\",\"releaseName\":\"Release-34\",\"repoProvider\":\"TfsGit\",\"repoName\":\"AzurePlayground\",\"collectionUrl\":\"https://dev.azure.com/JPavoncello/\",\"teamProject\":\"9b1c0c31-183f-4d36-8d5d-6a4f58ba2a15\",\"slotName\":\"production\"}",
+                "start_time": "2018-09-24T17:37:15.1549906Z",
+                "end_time": "2018-09-24T17:37:15.1549906Z",
+                "active": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_AzurePlaygroundMvcDemoQA_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/AzurePlaygroundMvcDemoQA/deployments/421537807144787'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_AzurePlaygroundMvcDemoQA_name'), '/', parameters('deployments_421537807144787_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_421537807144787_name')]",
+                "status": 4,
+                "author_email": "",
+                "author": "Joshua Pavoncello",
+                "deployer": "VSTS",
+                "message": "{\"type\":\"Deployment\",\"commitId\":\"af8038a4bfd907c8365c5176846c630ad1ba52a8\",\"buildId\":\"30\",\"releaseId\":\"42\",\"buildNumber\":\"20180924.5\",\"releaseName\":\"Release-33\",\"repoProvider\":\"TfsGit\",\"repoName\":\"AzurePlayground\",\"collectionUrl\":\"https://dev.azure.com/JPavoncello/\",\"teamProject\":\"9b1c0c31-183f-4d36-8d5d-6a4f58ba2a15\",\"slotName\":\"production\"}",
+                "start_time": "2018-09-24T16:39:05.6188547Z",
+                "end_time": "2018-09-24T16:39:05.6188547Z",
+                "active": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_AzurePlaygroundMvcDemoQA_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/AzurePlaygroundMvcDemoQA/deployments/381537800546271'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_AzurePlaygroundMvcDemoQA_name'), '/', parameters('deployments_381537800546271_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_381537800546271_name')]",
+                "status": 4,
+                "author_email": "",
+                "author": "Joshua Pavoncello",
+                "deployer": "VSTS",
+                "message": "{\"type\":\"Deployment\",\"commitId\":\"14a88162ed86f2ee1d30a896c2947bfcd909fa7d\",\"buildId\":\"29\",\"releaseId\":\"38\",\"buildNumber\":\"20180924.4\",\"releaseName\":\"Release-32\",\"repoProvider\":\"TfsGit\",\"repoName\":\"AzurePlayground\",\"collectionUrl\":\"https://dev.azure.com/JPavoncello/\",\"teamProject\":\"9b1c0c31-183f-4d36-8d5d-6a4f58ba2a15\",\"slotName\":\"production\"}",
+                "start_time": "2018-09-24T14:49:07.3498507Z",
+                "end_time": "2018-09-24T14:49:07.3498507Z",
+                "active": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_AzurePlaygroundMvcDemoQA_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/AzurePlaygroundMvcDemoQA/deployments/351537798387079'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_AzurePlaygroundMvcDemoQA_name'), '/', parameters('deployments_351537798387079_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_351537798387079_name')]",
+                "status": 4,
+                "author_email": "",
+                "author": "Joshua Pavoncello",
+                "deployer": "VSTS",
+                "message": "{\"type\":\"Deployment\",\"commitId\":\"4058f1e6612a4c646f17d67fef4f93a433cbd5e5\",\"buildId\":\"28\",\"releaseId\":\"35\",\"buildNumber\":\"20180924.3\",\"releaseName\":\"Release-31\",\"repoProvider\":\"TfsGit\",\"repoName\":\"AzurePlayground\",\"collectionUrl\":\"https://dev.azure.com/JPavoncello/\",\"teamProject\":\"9b1c0c31-183f-4d36-8d5d-6a4f58ba2a15\",\"slotName\":\"production\"}",
+                "start_time": "2018-09-24T14:13:07.2432509Z",
+                "end_time": "2018-09-24T14:13:07.2432509Z",
+                "active": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_AzurePlaygroundMvcDemoQA_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/AzurePlaygroundMvcDemoQA/deployments/311537798317543'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_AzurePlaygroundMvcDemoQA_name'), '/', parameters('deployments_311537798317543_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_311537798317543_name')]",
+                "status": 4,
+                "author_email": "",
+                "author": "Joshua Pavoncello",
+                "deployer": "VSTS",
+                "message": "{\"type\":\"Deployment\",\"commitId\":\"20fd4519a2a5ef64487af0b397ae1aa6605e4c89\",\"buildId\":\"27\",\"releaseId\":\"31\",\"buildNumber\":\"20180924.2\",\"releaseName\":\"Release-30\",\"repoProvider\":\"TfsGit\",\"repoName\":\"AzurePlayground\",\"collectionUrl\":\"https://dev.azure.com/JPavoncello/\",\"teamProject\":\"9b1c0c31-183f-4d36-8d5d-6a4f58ba2a15\",\"slotName\":\"production\"}",
+                "start_time": "2018-09-24T14:12:02.1757435Z",
+                "end_time": "2018-09-24T14:12:02.1757435Z",
+                "active": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_AzurePlaygroundMvcDemoQA_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/AzurePlaygroundMvcDemoQA/deployments/291537590033468'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_AzurePlaygroundMvcDemoQA_name'), '/', parameters('deployments_291537590033468_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_291537590033468_name')]",
+                "status": 4,
+                "author_email": "",
+                "author": "Joshua Pavoncello",
+                "deployer": "VSTS",
+                "message": "{\"type\":\"Deployment\",\"commitId\":\"d40ca5ebb9ea55d1bb3e7a99f0d374a58cff634d\",\"buildId\":\"25\",\"releaseId\":\"29\",\"buildNumber\":\"20180922.1\",\"releaseName\":\"Release-29\",\"repoProvider\":\"TfsGit\",\"repoName\":\"AzurePlayground\",\"collectionUrl\":\"https://dev.azure.com/JPavoncello/\",\"teamProject\":\"9b1c0c31-183f-4d36-8d5d-6a4f58ba2a15\",\"slotName\":\"production\"}",
+                "start_time": "2018-09-22T04:20:34.3580789Z",
+                "end_time": "2018-09-22T04:20:34.3580789Z",
+                "active": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_AzurePlaygroundMvcDemoQA_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/AzurePlaygroundMvcDemoQA/deployments/281537564968039'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_AzurePlaygroundMvcDemoQA_name'), '/', parameters('deployments_281537564968039_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_281537564968039_name')]",
+                "status": 4,
+                "author_email": "",
+                "author": "Joshua Pavoncello",
+                "deployer": "VSTS",
+                "message": "{\"type\":\"Deployment\",\"commitId\":\"e4bc1d51b080fea44fbdbfb83c59eba520e67169\",\"buildId\":\"24\",\"releaseId\":\"28\",\"buildNumber\":\"20180921.3\",\"releaseName\":\"Release-28\",\"repoProvider\":\"TfsGit\",\"repoName\":\"AzurePlayground\",\"collectionUrl\":\"https://dev.azure.com/JPavoncello/\",\"teamProject\":\"9b1c0c31-183f-4d36-8d5d-6a4f58ba2a15\",\"slotName\":\"production\"}",
+                "start_time": "2018-09-21T21:22:49.1546858Z",
+                "end_time": "2018-09-21T21:22:49.1546858Z",
+                "active": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_AzurePlaygroundMvcDemoQA_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/AzurePlaygroundMvcDemoQA/deployments/261537561109189'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_AzurePlaygroundMvcDemoQA_name'), '/', parameters('deployments_261537561109189_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_261537561109189_name')]",
+                "status": 4,
+                "author_email": "",
+                "author": "Joshua Pavoncello",
+                "deployer": "VSTS",
+                "message": "{\"type\":\"Deployment\",\"commitId\":\"f29b88f93402484c292f33f2f66765aab4b9cd10\",\"buildId\":\"22\",\"releaseId\":\"26\",\"buildNumber\":\"20180921.1\",\"releaseName\":\"Release-26\",\"repoProvider\":\"TfsGit\",\"repoName\":\"AzurePlayground\",\"collectionUrl\":\"https://dev.azure.com/JPavoncello/\",\"teamProject\":\"9b1c0c31-183f-4d36-8d5d-6a4f58ba2a15\",\"slotName\":\"production\"}",
+                "start_time": "2018-09-21T20:18:32.8442223Z",
+                "end_time": "2018-09-21T20:18:32.8442223Z",
+                "active": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_AzurePlaygroundMvcDemoQA_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/AzurePlaygroundMvcDemoQA/deployments/251537410383407'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_AzurePlaygroundMvcDemoQA_name'), '/', parameters('deployments_251537410383407_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_251537410383407_name')]",
+                "status": 4,
+                "author_email": "",
+                "author": "Joshua Pavoncello",
+                "deployer": "VSTS",
+                "message": "{\"type\":\"Deployment\",\"commitId\":\"5c8cdc750d04cbb803bcee13d67eeea5af179a8f\",\"buildId\":\"21\",\"releaseId\":\"25\",\"buildNumber\":\"20180920.1\",\"releaseName\":\"Release-25\",\"repoProvider\":\"TfsGit\",\"repoName\":\"AzurePlayground\",\"collectionUrl\":\"https://dev.azure.com/JPavoncello/\",\"teamProject\":\"9b1c0c31-183f-4d36-8d5d-6a4f58ba2a15\",\"slotName\":\"production\"}",
+                "start_time": "2018-09-20T02:26:28.5429141Z",
+                "end_time": "2018-09-20T02:26:28.5429141Z",
+                "active": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_AzurePlaygroundMvcDemoQA_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/AzurePlaygroundMvcDemoQA/hostNameBindings/azureplaygroundmvcdemoqa.azurewebsites.net'.",
+            "type": "Microsoft.Web/sites/hostNameBindings",
+            "name": "[concat(parameters('sites_AzurePlaygroundMvcDemoQA_name'), '/', parameters('hostNameBindings_azureplaygroundmvcdemoqa.azurewebsites.net_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "siteName": "AzurePlaygroundMvcDemoQA",
+                "domainId": null,
+                "hostNameType": "Verified"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_AzurePlaygroundMvcDemoQA_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/azuretoolkit-joshpavoncello/config/web'.",
+            "type": "Microsoft.Web/sites/config",
+            "name": "[concat(parameters('sites_azuretoolkit_joshpavoncello_name'), '/', parameters('config_web_name_4'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "numberOfWorkers": 1,
+                "defaultDocuments": [
+                    "Default.htm",
+                    "Default.html",
+                    "Default.asp",
+                    "index.htm",
+                    "index.html",
+                    "iisstart.htm",
+                    "default.aspx",
+                    "index.php",
+                    "hostingstart.html"
+                ],
+                "netFrameworkVersion": "v4.0",
+                "phpVersion": "5.6",
+                "pythonVersion": "",
+                "nodeVersion": "",
+                "linuxFxVersion": "",
+                "windowsFxVersion": null,
+                "requestTracingEnabled": false,
+                "requestTracingExpirationTime": "2018-09-10T21:58:00Z",
+                "remoteDebuggingEnabled": false,
+                "remoteDebuggingVersion": null,
+                "httpLoggingEnabled": false,
+                "logsDirectorySizeLimit": 35,
+                "detailedErrorLoggingEnabled": true,
+                "publishingUsername": "$azuretoolkit-joshpavoncello",
+                "publishingPassword": null,
+                "appSettings": null,
+                "azureStorageAccounts": {},
+                "metadata": null,
+                "connectionStrings": null,
+                "machineKey": null,
+                "handlerMappings": null,
+                "documentRoot": null,
+                "scmType": "LocalGit",
+                "use32BitWorkerProcess": true,
+                "webSocketsEnabled": false,
+                "alwaysOn": false,
+                "javaVersion": null,
+                "javaContainer": null,
+                "javaContainerVersion": null,
+                "appCommandLine": "",
+                "managedPipelineMode": "Integrated",
+                "virtualApplications": [
+                    {
+                        "virtualPath": "/",
+                        "physicalPath": "site\\wwwroot",
+                        "preloadEnabled": false,
+                        "virtualDirectories": null
+                    }
+                ],
+                "winAuthAdminState": 0,
+                "winAuthTenantState": 0,
+                "customAppPoolIdentityAdminState": false,
+                "customAppPoolIdentityTenantState": false,
+                "runtimeADUser": null,
+                "runtimeADUserPassword": null,
+                "loadBalancing": "LeastRequests",
+                "routingRules": [],
+                "experiments": {
+                    "rampUpRules": []
+                },
+                "limits": null,
+                "autoHealEnabled": false,
+                "autoHealRules": null,
+                "tracingOptions": null,
+                "vnetName": "",
+                "siteAuthEnabled": true,
+                "siteAuthSettings": {
+                    "enabled": null,
+                    "unauthenticatedClientAction": null,
+                    "tokenStoreEnabled": null,
+                    "allowedExternalRedirectUrls": null,
+                    "defaultProvider": null,
+                    "clientId": "5bc5211d-982a-46ae-9161-da952f50ea96",
+                    "clientSecret": null,
+                    "issuer": "https://azuretrainingwestfalia.b2clogin.com/AzureTrainingWestfalia.onmicrosoft.com/v2.0/.well-known/openid-configuration?p=B2C_1_DefaultSignUpPolicy",
+                    "allowedAudiences": null,
+                    "additionalLoginParams": null,
+                    "isAadAutoProvisioned": false,
+                    "googleClientId": null,
+                    "googleClientSecret": null,
+                    "googleOAuthScopes": null,
+                    "facebookAppId": null,
+                    "facebookAppSecret": null,
+                    "facebookOAuthScopes": null,
+                    "twitterConsumerKey": null,
+                    "twitterConsumerSecret": null,
+                    "microsoftAccountClientId": null,
+                    "microsoftAccountClientSecret": null,
+                    "microsoftAccountOAuthScopes": null
+                },
+                "cors": null,
+                "push": null,
+                "apiDefinition": null,
+                "autoSwapSlotName": null,
+                "localMySqlEnabled": false,
+                "managedServiceIdentityId": null,
+                "xManagedServiceIdentityId": null,
+                "ipSecurityRestrictions": null,
+                "http20Enabled": false,
+                "minTlsVersion": "1.2",
+                "ftpsState": "AllAllowed",
+                "reservedInstanceCount": 0
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_azuretoolkit_joshpavoncello_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/azuretoolkit-joshpavoncello/deployments/06891aad7736fa77be278e2411222f359722efca'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_azuretoolkit_joshpavoncello_name'), '/', parameters('deployments_06891aad7736fa77be278e2411222f359722efca_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_06891aad7736fa77be278e2411222f359722efca_name')]",
+                "status": 3,
+                "author_email": "jrpavoncello@gmail.com",
+                "author": "Josh Pavoncello",
+                "deployer": "azuretoolkit-joshpavoncello",
+                "message": "cleaned up route link\n",
+                "start_time": "2018-09-11T05:12:42.3278406Z",
+                "end_time": "2018-09-18T17:30:19.9051641Z",
+                "active": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_azuretoolkit_joshpavoncello_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/azuretoolkit-joshpavoncello/deployments/03738138820576ae2a6381e65b30ee58a445381f'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_azuretoolkit_joshpavoncello_name'), '/', parameters('deployments_03738138820576ae2a6381e65b30ee58a445381f_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_03738138820576ae2a6381e65b30ee58a445381f_name')]",
+                "status": 4,
+                "author_email": "jrpavoncello@gmail.com",
+                "author": "Josh Pavoncello",
+                "deployer": "azuretoolkit-joshpavoncello",
+                "message": "Fix build error, moved gallery component\n",
+                "start_time": "2018-09-11T04:38:31.2302487Z",
+                "end_time": "2018-09-11T04:44:04.8941561Z",
+                "active": true
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_azuretoolkit_joshpavoncello_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/azuretoolkit-joshpavoncello/deployments/3ef07c4aff95795140ae04eb65707c88ec72ddc1'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_azuretoolkit_joshpavoncello_name'), '/', parameters('deployments_3ef07c4aff95795140ae04eb65707c88ec72ddc1_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_3ef07c4aff95795140ae04eb65707c88ec72ddc1_name')]",
+                "status": 4,
+                "author_email": "JPavoncello@westfaliausa.com",
+                "author": "Joshua Pavoncello",
+                "deployer": "",
+                "message": "Remove WIP code to test environment chagnes\n",
+                "start_time": "2018-09-10T20:59:16.222678Z",
+                "end_time": "2018-09-10T21:04:10.9534096Z",
+                "active": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_azuretoolkit_joshpavoncello_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/azuretoolkit-joshpavoncello/deployments/29c1fa8099c97be4afdf701e0658fd5b4a164c7f'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_azuretoolkit_joshpavoncello_name'), '/', parameters('deployments_29c1fa8099c97be4afdf701e0658fd5b4a164c7f_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_29c1fa8099c97be4afdf701e0658fd5b4a164c7f_name')]",
+                "status": 4,
+                "author_email": "JPavoncello@westfaliausa.com",
+                "author": "Joshua Pavoncello",
+                "deployer": "azuretoolkit-joshpavoncello",
+                "message": "Migrated to environment injected secret settings\n",
+                "start_time": "2018-09-10T20:16:46.0362021Z",
+                "end_time": "2018-09-10T20:21:47.0325218Z",
+                "active": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_azuretoolkit_joshpavoncello_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/azuretoolkit-joshpavoncello/deployments/2580dce2319a2cb62e37ff33be64fa57ef09ae76'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_azuretoolkit_joshpavoncello_name'), '/', parameters('deployments_2580dce2319a2cb62e37ff33be64fa57ef09ae76_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_2580dce2319a2cb62e37ff33be64fa57ef09ae76_name')]",
+                "status": 4,
+                "author_email": "JPavoncello@westfaliausa.com",
+                "author": "Joshua Pavoncello",
+                "deployer": "azuretoolkit-joshpavoncello",
+                "message": "Initial commit\n",
+                "start_time": "2018-09-10T19:44:35.5946Z",
+                "end_time": "2018-09-10T19:50:21.3956731Z",
+                "active": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_azuretoolkit_joshpavoncello_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/azuretoolkit-joshpavoncello/deployments/7e2e3f30ce39c5e12dca94220c132f6abfef4c36'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_azuretoolkit_joshpavoncello_name'), '/', parameters('deployments_7e2e3f30ce39c5e12dca94220c132f6abfef4c36_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_7e2e3f30ce39c5e12dca94220c132f6abfef4c36_name')]",
+                "status": 4,
+                "author_email": "JPavoncello@westfaliausa.com",
+                "author": "Joshua Pavoncello",
+                "deployer": "azuretoolkit-joshpavoncello",
+                "message": "Refactor + fix issue with image save to Azure not displaying successful in Angular despite the action being successful\n",
+                "start_time": "2018-09-10T15:16:31.8725471Z",
+                "end_time": "2018-09-10T15:29:06.9745001Z",
+                "active": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_azuretoolkit_joshpavoncello_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/azuretoolkit-joshpavoncello/deployments/9343e9fa6618f38911e8f043971a748a88b61945'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_azuretoolkit_joshpavoncello_name'), '/', parameters('deployments_9343e9fa6618f38911e8f043971a748a88b61945_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_9343e9fa6618f38911e8f043971a748a88b61945_name')]",
+                "status": 4,
+                "author_email": "JPavoncello@westfaliausa.com",
+                "author": "Joshua Pavoncello",
+                "deployer": "azuretoolkit-joshpavoncello",
+                "message": "Added support for uploading images from Bing search to Blob storage\n",
+                "start_time": "2018-09-07T19:07:06.4608344Z",
+                "end_time": "2018-09-07T19:13:08.3099418Z",
+                "active": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_azuretoolkit_joshpavoncello_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/azuretoolkit-joshpavoncello/deployments/276218c26ab4b4d86ad2ad1043ccb2ec9db414ae'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_azuretoolkit_joshpavoncello_name'), '/', parameters('deployments_276218c26ab4b4d86ad2ad1043ccb2ec9db414ae_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_276218c26ab4b4d86ad2ad1043ccb2ec9db414ae_name')]",
+                "status": 4,
+                "author_email": "JPavoncello@westfaliausa.com",
+                "author": "Joshua Pavoncello",
+                "deployer": "azuretoolkit-joshpavoncello",
+                "message": "Fixed issue with injected base url when authenticating.\n",
+                "start_time": "2018-09-07T15:59:03.9269499Z",
+                "end_time": "2018-09-07T16:04:23.7742549Z",
+                "active": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_azuretoolkit_joshpavoncello_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/azuretoolkit-joshpavoncello/deployments/4242852a9d56bdb95d5032924ed03b1b79b89339'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_azuretoolkit_joshpavoncello_name'), '/', parameters('deployments_4242852a9d56bdb95d5032924ed03b1b79b89339_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_4242852a9d56bdb95d5032924ed03b1b79b89339_name')]",
+                "status": 4,
+                "author_email": "JPavoncello@westfaliausa.com",
+                "author": "Joshua Pavoncello",
+                "deployer": "azuretoolkit-joshpavoncello",
+                "message": "Added support for Azure B2C authentication.\n",
+                "start_time": "2018-09-07T15:44:45.1191961Z",
+                "end_time": "2018-09-07T15:50:17.1669604Z",
+                "active": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_azuretoolkit_joshpavoncello_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/azuretoolkit-joshpavoncello/deployments/349497deac7ce536d8e9c4fd3cc78586878ec8f6'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_azuretoolkit_joshpavoncello_name'), '/', parameters('deployments_349497deac7ce536d8e9c4fd3cc78586878ec8f6_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_349497deac7ce536d8e9c4fd3cc78586878ec8f6_name')]",
+                "status": 4,
+                "author_email": "jrpavoncello@gmail.com",
+                "author": "Josh Pavoncello",
+                "deployer": "azuretoolkit-joshpavoncello",
+                "message": "Fixed computer vision and bing search api calls\n",
+                "start_time": "2018-09-07T14:44:32.7221623Z",
+                "end_time": "2018-09-07T14:55:26.8906847Z",
+                "active": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_azuretoolkit_joshpavoncello_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/azuretoolkit-joshpavoncello/deployments/d5c286d0d05c66367c70e55c7ae1944b83e1ef60'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_azuretoolkit_joshpavoncello_name'), '/', parameters('deployments_d5c286d0d05c66367c70e55c7ae1944b83e1ef60_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_d5c286d0d05c66367c70e55c7ae1944b83e1ef60_name')]",
+                "status": 4,
+                "author_email": "JPavoncello@westfaliausa.com",
+                "author": "Joshua Pavoncello",
+                "deployer": "azuretoolkit-joshpavoncello",
+                "message": "Read me!\n",
+                "start_time": "2018-09-05T03:21:12.843698Z",
+                "end_time": "2018-09-05T03:33:12.848751Z",
+                "active": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_azuretoolkit_joshpavoncello_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/azuretoolkit-joshpavoncello/hostNameBindings/azuretoolkit-joshpavoncello.azurewebsites.net'.",
+            "type": "Microsoft.Web/sites/hostNameBindings",
+            "name": "[concat(parameters('sites_azuretoolkit_joshpavoncello_name'), '/', parameters('hostNameBindings_azuretoolkit_joshpavoncello.azurewebsites.net_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "siteName": "azuretoolkit-joshpavoncello",
+                "domainId": null,
+                "hostNameType": "Verified"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_azuretoolkit_joshpavoncello_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/AzurePlaygroundMvcDemoPROD/config/web'.",
+            "type": "Microsoft.Web/sites/config",
+            "name": "[concat(parameters('sites_AzurePlaygroundMvcDemoPROD_name'), '/', parameters('config_web_name_3'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "tags": {
+                "hidden-related:/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Web/serverfarms/FreeServicePlan": "empty"
+            },
+            "scale": null,
+            "properties": {
+                "numberOfWorkers": 1,
+                "defaultDocuments": [
+                    "Default.htm",
+                    "Default.html",
+                    "Default.asp",
+                    "index.htm",
+                    "index.html",
+                    "iisstart.htm",
+                    "default.aspx",
+                    "index.php",
+                    "hostingstart.html"
+                ],
+                "netFrameworkVersion": "v4.0",
+                "phpVersion": "5.6",
+                "pythonVersion": "",
+                "nodeVersion": "",
+                "linuxFxVersion": "",
+                "windowsFxVersion": null,
+                "requestTracingEnabled": false,
+                "remoteDebuggingEnabled": false,
+                "remoteDebuggingVersion": "VS2017",
+                "httpLoggingEnabled": false,
+                "logsDirectorySizeLimit": 35,
+                "detailedErrorLoggingEnabled": false,
+                "publishingUsername": "$AzurePlaygroundMvcDemoPROD",
+                "publishingPassword": null,
+                "appSettings": null,
+                "azureStorageAccounts": {},
+                "metadata": null,
+                "connectionStrings": null,
+                "machineKey": null,
+                "handlerMappings": null,
+                "documentRoot": null,
+                "scmType": "VSTSRM",
+                "use32BitWorkerProcess": true,
+                "webSocketsEnabled": false,
+                "alwaysOn": false,
+                "javaVersion": null,
+                "javaContainer": null,
+                "javaContainerVersion": null,
+                "appCommandLine": "",
+                "managedPipelineMode": "Integrated",
+                "virtualApplications": [
+                    {
+                        "virtualPath": "/",
+                        "physicalPath": "site\\wwwroot",
+                        "preloadEnabled": false,
+                        "virtualDirectories": null
+                    }
+                ],
+                "winAuthAdminState": 0,
+                "winAuthTenantState": 0,
+                "customAppPoolIdentityAdminState": false,
+                "customAppPoolIdentityTenantState": false,
+                "runtimeADUser": null,
+                "runtimeADUserPassword": null,
+                "loadBalancing": "LeastRequests",
+                "routingRules": [],
+                "experiments": {
+                    "rampUpRules": []
+                },
+                "limits": null,
+                "autoHealEnabled": false,
+                "autoHealRules": null,
+                "tracingOptions": null,
+                "vnetName": "",
+                "siteAuthEnabled": false,
+                "siteAuthSettings": {
+                    "enabled": null,
+                    "unauthenticatedClientAction": null,
+                    "tokenStoreEnabled": null,
+                    "allowedExternalRedirectUrls": null,
+                    "defaultProvider": null,
+                    "clientId": null,
+                    "clientSecret": null,
+                    "issuer": null,
+                    "allowedAudiences": null,
+                    "additionalLoginParams": null,
+                    "isAadAutoProvisioned": false,
+                    "googleClientId": null,
+                    "googleClientSecret": null,
+                    "googleOAuthScopes": null,
+                    "facebookAppId": null,
+                    "facebookAppSecret": null,
+                    "facebookOAuthScopes": null,
+                    "twitterConsumerKey": null,
+                    "twitterConsumerSecret": null,
+                    "microsoftAccountClientId": null,
+                    "microsoftAccountClientSecret": null,
+                    "microsoftAccountOAuthScopes": null
+                },
+                "cors": null,
+                "push": null,
+                "apiDefinition": null,
+                "autoSwapSlotName": null,
+                "localMySqlEnabled": false,
+                "managedServiceIdentityId": 968,
+                "xManagedServiceIdentityId": null,
+                "ipSecurityRestrictions": null,
+                "http20Enabled": false,
+                "minTlsVersion": "1.2",
+                "ftpsState": "AllAllowed",
+                "reservedInstanceCount": 0
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_AzurePlaygroundMvcDemoPROD_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/AzurePlaygroundMvcDemoPROD/deployments/501537823021760'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_AzurePlaygroundMvcDemoPROD_name'), '/', parameters('deployments_501537823021760_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_501537823021760_name')]",
+                "status": 4,
+                "author_email": "",
+                "author": "Joshua Pavoncello",
+                "deployer": "VSTS",
+                "message": "{\"type\":\"Deployment\",\"commitId\":\"f3b16431124dc7a0a6664037c1834f37203c9419\",\"buildId\":\"31\",\"releaseId\":\"50\",\"buildNumber\":\"20180924.6\",\"releaseName\":\"Release-7\",\"repoProvider\":\"TfsGit\",\"repoName\":\"AzurePlayground\",\"collectionUrl\":\"https://dev.azure.com/JPavoncello/\",\"teamProject\":\"9b1c0c31-183f-4d36-8d5d-6a4f58ba2a15\",\"slotName\":\"production\"}",
+                "start_time": "2018-09-24T21:03:41.9289247Z",
+                "end_time": "2018-09-24T21:03:41.9289247Z",
+                "active": true
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_AzurePlaygroundMvcDemoPROD_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/AzurePlaygroundMvcDemoPROD/deployments/481537821905018'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_AzurePlaygroundMvcDemoPROD_name'), '/', parameters('deployments_481537821905018_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_481537821905018_name')]",
+                "status": 4,
+                "author_email": "",
+                "author": "Joshua Pavoncello",
+                "deployer": "VSTS",
+                "message": "{\"type\":\"Deployment\",\"commitId\":\"f3b16431124dc7a0a6664037c1834f37203c9419\",\"buildId\":\"31\",\"releaseId\":\"48\",\"buildNumber\":\"20180924.6\",\"releaseName\":\"Release-6\",\"repoProvider\":\"TfsGit\",\"repoName\":\"AzurePlayground\",\"collectionUrl\":\"https://dev.azure.com/JPavoncello/\",\"teamProject\":\"9b1c0c31-183f-4d36-8d5d-6a4f58ba2a15\",\"slotName\":\"production\"}",
+                "start_time": "2018-09-24T20:45:06.0816676Z",
+                "end_time": "2018-09-24T20:45:06.0816676Z",
+                "active": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_AzurePlaygroundMvcDemoPROD_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/AzurePlaygroundMvcDemoPROD/deployments/251537561118903'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_AzurePlaygroundMvcDemoPROD_name'), '/', parameters('deployments_251537561118903_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_251537561118903_name')]",
+                "status": 4,
+                "author_email": "",
+                "author": "Joshua Pavoncello",
+                "deployer": "VSTS",
+                "message": "{\"type\":\"Deployment\",\"commitId\":\"5c8cdc750d04cbb803bcee13d67eeea5af179a8f\",\"buildId\":\"21\",\"releaseId\":\"25\",\"buildNumber\":\"20180920.1\",\"releaseName\":\"Release-25\",\"repoProvider\":\"TfsGit\",\"repoName\":\"AzurePlayground\",\"collectionUrl\":\"https://dev.azure.com/JPavoncello/\",\"teamProject\":\"9b1c0c31-183f-4d36-8d5d-6a4f58ba2a15\",\"slotName\":\"production\"}",
+                "start_time": "2018-09-21T20:18:43.1138213Z",
+                "end_time": "2018-09-21T20:18:43.1138213Z",
+                "active": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_AzurePlaygroundMvcDemoPROD_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/AzurePlaygroundMvcDemoPROD/deployments/171537333364465'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_AzurePlaygroundMvcDemoPROD_name'), '/', parameters('deployments_171537333364465_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_171537333364465_name')]",
+                "status": 4,
+                "author_email": "",
+                "author": "Joshua Pavoncello",
+                "deployer": "VSTS",
+                "message": "{\"type\":\"Deployment\",\"commitId\":\"5741ea1ec1b9fca90b5c13c3f505b6815399ed33\",\"buildId\":\"18\",\"releaseId\":\"17\",\"buildNumber\":\"20180919.2\",\"releaseName\":\"Release-17\",\"repoProvider\":\"TfsGit\",\"repoName\":\"AzurePlayground\",\"collectionUrl\":\"https://dev.azure.com/JPavoncello/\",\"teamProject\":\"9b1c0c31-183f-4d36-8d5d-6a4f58ba2a15\",\"slotName\":\"production\"}",
+                "start_time": "2018-09-19T05:02:44.7410704Z",
+                "end_time": "2018-09-19T05:02:44.7410704Z",
+                "active": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_AzurePlaygroundMvcDemoPROD_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourcegroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/AzurePlaygroundMvcDemoPROD/deployments/101537297250327'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_AzurePlaygroundMvcDemoPROD_name'), '/', parameters('deployments_101537297250327_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_101537297250327_name')]",
+                "status": 4,
+                "author_email": "",
+                "author": "Joshua Pavoncello",
+                "deployer": "VSTS",
+                "message": "{\"type\":\"Deployment\",\"commitId\":\"ec9ac8255e785d3523e854cf6a378528eeb07595\",\"buildId\":\"16\",\"releaseId\":\"10\",\"buildNumber\":\"20180918.10\",\"releaseName\":\"Release-10\",\"repoProvider\":\"TfsGit\",\"repoName\":\"AzurePlayground\",\"collectionUrl\":\"https://dev.azure.com/JPavoncello/\",\"teamProject\":\"9b1c0c31-183f-4d36-8d5d-6a4f58ba2a15\",\"slotName\":\"production\"}",
+                "start_time": "2018-09-18T19:00:50.6621165Z",
+                "end_time": "2018-09-18T19:00:50.6621165Z",
+                "active": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_AzurePlaygroundMvcDemoPROD_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/a2c86dd3-6544-4d61-ac2b-2172499ecff5/resourceGroups/AzureToolkitResourceGroup/providers/Microsoft.Web/sites/AzurePlaygroundMvcDemoPROD/hostNameBindings/azureplaygroundmvcdemoprod.azurewebsites.net'.",
+            "type": "Microsoft.Web/sites/hostNameBindings",
+            "name": "[concat(parameters('sites_AzurePlaygroundMvcDemoPROD_name'), '/', parameters('hostNameBindings_azureplaygroundmvcdemoprod.azurewebsites.net_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "East US",
+            "scale": null,
+            "properties": {
+                "siteName": "AzurePlaygroundMvcDemoPROD",
+                "domainId": null,
+                "hostNameType": "Verified"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_AzurePlaygroundMvcDemoPROD_name'))]"
+            ]
+        }
+    ]
+}

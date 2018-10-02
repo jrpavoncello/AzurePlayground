@@ -7,7 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzurePlayground.MvcDemo", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzurePlayground.Model", "AzurePlayground.Model\AzurePlayground.Model.csproj", "{B88366BA-A757-43A8-90F7-FA4A0A61FED4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzurePlayground.EmailPusher", "AzurePlayground.EmailPusher\AzurePlayground.EmailPusher.csproj", "{1FA5F0C7-57B3-4492-80BB-C01C65C0759A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzurePlayground.EmailPusher", "AzurePlayground.EmailPusher\AzurePlayground.EmailPusher.csproj", "{1FA5F0C7-57B3-4492-80BB-C01C65C0759A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockerTest", "DockerTest\DockerTest.csproj", "{2CF584E6-AD8E-4D77-B351-9EC34A44D554}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E155E162-E7EB-45A3-BA59-2689051E15C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{1FA5F0C7-57B3-4492-80BB-C01C65C0759A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FA5F0C7-57B3-4492-80BB-C01C65C0759A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FA5F0C7-57B3-4492-80BB-C01C65C0759A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CF584E6-AD8E-4D77-B351-9EC34A44D554}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CF584E6-AD8E-4D77-B351-9EC34A44D554}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CF584E6-AD8E-4D77-B351-9EC34A44D554}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CF584E6-AD8E-4D77-B351-9EC34A44D554}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E155E162-E7EB-45A3-BA59-2689051E15C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E155E162-E7EB-45A3-BA59-2689051E15C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E155E162-E7EB-45A3-BA59-2689051E15C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E155E162-E7EB-45A3-BA59-2689051E15C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
